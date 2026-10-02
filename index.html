@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mamdani poll tracker</title>
+<meta name="description" content="Every reputable citywide poll of Mayor Zohran Mamdani's job approval, performance rating and favorability, with field dates, populations and sample sizes.">
+<link rel="stylesheet" href="https://use.typekit.net/qqk2vto.css">
+<link rel="stylesheet" href="https://vital-city-nyc.github.io/vital-city-design-system/tokens/tokens.css">
+<link rel="stylesheet" href="https://vital-city-nyc.github.io/vital-city-design-system/charts/chart-theme.css">
+<style>
+@font-face{font-family:'GascogneTS';src:url('https://vital-city-nyc.github.io/vital-city-design-system/fonts/GascogneTS-Light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+:root{--vc-sans:"halyard-text","Helvetica Neue",Arial,sans-serif;--vc-serif:"GascogneTS",Georgia,serif;--vc-paper:#f7f7f4;--c-app:#ff7c53;--c-perf:#217ebe;--c-fav:#394882}
+*{box-sizing:border-box}html,body{margin:0;background:#fff;color:#050507}
+body{font-family:var(--vc-sans);font-weight:300;padding:24px 16px}
+.card{max-width:880px;margin:0 auto;border:1px solid #050507;background:#fff}
+body.embed{padding:0}body.embed .card{border:none;max-width:none}
+.head{padding:22px 24px 18px;border-bottom:1px solid #dddddd}
+h1{font-family:var(--vc-sans);font-weight:900;font-size:1.5rem;line-height:1.2;margin:0 0 6px;max-width:34ch}
+.dek{font-weight:300;font-size:.95rem;line-height:1.5;color:#707175;margin:0;max-width:62ch}.dek b{color:#050507;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);background:var(--vc-paper);border-bottom:1px solid #dddddd}
+.stats>div{padding:14px 18px 16px;border-right:1px solid #dddddd}.stats>div:last-child{border-right:0}
+.stats .l{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#707175;margin-bottom:8px}
+.stats .n{font-family:var(--vc-serif);font-weight:300;font-size:1.9rem;line-height:1;color:#050507}.stats .n span{font-family:var(--vc-sans);font-weight:300;font-size:.9rem;margin-left:4px}
+.stats .s{font-size:.84rem;color:#050507;margin-top:6px;line-height:1.35}.stats .src{font-size:.74rem;color:#707175;margin-top:4px;line-height:1.35}
+.sec{padding:20px 24px;border-bottom:1px solid #dddddd}.sec:last-child{border-bottom:0}
+.sec h2{font-family:var(--vc-sans);font-weight:900;font-size:1.25rem;line-height:1.25;margin:0 0 4px;max-width:62ch}
+.sub{font-weight:200;font-size:.95rem;color:#707175;margin:0 0 14px;max-width:62ch}
+.chartwrap{position:relative}
+#chart{width:100%;height:360px;display:block}
+#chart .pt{cursor:pointer}#chart .pt:hover{opacity:.7}
+#tip{position:absolute;pointer-events:none;display:none;width:max-content;max-width:270px;background:#050507;color:#fff;font-size:.78rem;line-height:1.4;padding:8px 10px;z-index:5}
+#tip b{display:block;font-weight:700;margin-bottom:2px}#tip .k{color:#bbbbbb}
+.ctl{display:flex;gap:12px 18px;flex-wrap:wrap;margin-top:10px;font-size:.82rem;color:#707175}
+.ctl label{display:flex;gap:6px;align-items:center}.ctl i{width:11px;height:11px;display:inline-block;flex:none}
+.ctl select{font:inherit;color:#050507}
+#maynote{font-size:.8rem;color:#707175;margin:10px 0 0;max-width:66ch;line-height:1.45}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#707175;text-align:left;padding:6px 8px 6px 0;border-bottom:1px solid #050507;white-space:nowrap}
+td{padding:7px 8px 7px 0;border-bottom:1px solid #dddddd;vertical-align:top}
+tr.mid td{border-bottom:0}tr.mid+tr td{padding-top:2px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.pos{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.sub td{color:#707175}tr.sub td.pos{font-weight:400}
+td a{color:#707175}.m-only{display:none}
+.note{font-size:.75rem;color:#707175;border-top:1px solid #dddddd;padding-top:8px;margin-top:14px}
+.how p{font-size:.92rem;line-height:1.5;max-width:66ch;margin:0 0 10px}
+@media(max-width:640px){.stats{grid-template-columns:1fr}.stats>div{border-right:0;border-bottom:1px solid #dddddd}.stats>div:last-child{border-bottom:0}.head,.sec{padding-left:16px;padding-right:16px}.hide-m{display:none}.m-only{display:block;font-size:.78rem;color:#707175}#chart{height:300px}h1{font-size:1.3rem}}
+</style></head>
+<body><div class="card">
+<div class="head">
+<h1 id="finding">What New Yorkers think of Mayor Mamdani, in every citywide poll since he took office</h1>
+<p class="dek" id="lede">Loading polls.</p>
+</div>
+<div class="stats" id="stats"></div>
+<section class="sec">
+<h2>Approval, performance and favorability are three different questions</h2>
+<p class="sub">Each mark sits at the midpoint of the poll's field dates. Hover or tap a mark for the poll, who was surveyed and how many. Marks are shaped by question type and should not be read as one trend line.</p>
+<div class="chartwrap"><svg id="chart" role="img" aria-label="Poll results over time"></svg><div id="tip"></div></div>
+<div class="ctl" id="ctl">
+ <label><input type="checkbox" data-t="approval" checked><i style="background:var(--c-app);border-radius:50%"></i> Job approval (approve)</label>
+ <label><input type="checkbox" data-t="performance" checked><i style="background:var(--c-perf)"></i> Performance rating (excellent plus good)</label>
+ <label><input type="checkbox" data-t="favorability" checked><svg width="13" height="13" viewBox="0 0 13 13" aria-hidden="true" style="flex:none"><polygon points="6.5,1 12.5,12 .5,12" fill="var(--c-fav)"/></svg> Favorability (favorable)</label>
+ <label><input type="checkbox" data-t="subsample" checked><svg width="13" height="13" viewBox="0 0 13 13" aria-hidden="true" style="flex:none"><polygon points="6.5,1.5 12,11.5 1,11.5" fill="#fff" stroke="var(--c-fav)" stroke-width="2" stroke-linejoin="round"/></svg> City subsample of a statewide poll (favorable)</label>
+ <label>Population <select id="pop"><option value="">all</option><option value="adults">all adults</option><option value="RV">registered voters</option><option value="LV">likely voters</option></select></label>
+ <label id="maylab" style="display:none">Compare with a previous mayor at the same point in his first term <select id="may"><option value="">none</option></select></label>
+</div>
+<p id="maynote" style="display:none"></p>
+</section>
+<section class="sec">
+<h2>Every poll</h2>
+<p class="sub">Newest first. Positive means approve, excellent plus good, or favorable, depending on the question. Grey rows are the New York City column of a statewide poll by Siena or Quinnipiac; the city sample size is not published, so they carry wider error than the citywide polls. Each row links to the pollster's own release.</p>
+<div style="overflow-x:auto"><table id="tbl"><thead><tr><th>Field dates</th><th>Pollster</th><th class="hide-m">Who was polled</th><th class="n hide-m">n</th><th>Question</th><th class="n">Positive</th><th class="n">Negative</th><th class="n hide-m">Unsure</th><th></th></tr></thead><tbody></tbody></table></div>
+</section>
+<section class="sec how">
+<h2>How to read this</h2>
+<p>Three questions appear here and they are not interchangeable. Job approval asks whether the respondent approves or disapproves of how the mayor is handling his job. A performance rating asks for a grade of excellent, good, fair or poor; this page counts excellent plus good as positive, and fair is not disapproval. Favorability asks about the person rather than the job and usually runs higher than approval.</p>
+<p>Populations and methods differ too. All adults, registered voters and likely voters answer differently. Suffolk polls by live phone; Marist and Emerson mix phone, text and online panels. Emerson offers a neutral option, which pulls both approve and disapprove down.</p>
+<p>Included: named pollsters that publish field dates, sample size and question wording. Excluded: campaign or interest-group polls released without crosstabs, and straw polls. The previous-mayor comparison uses each mayor's first-year polls placed by months since inauguration, with approve-or-disapprove readings drawn as circles and excellent-or-good grades as squares; hover a point for the pollster and who was surveyed.</p>
+<p class="note">Sources: pollsters' own releases, linked per row. Compiled <span id="compiled"></span>.</p>
+</section>
+</div>
+<script>
+if(new URLSearchParams(location.search).get('embed')==='1'){document.body.classList.add('embed');const ph=()=>{const el=document.querySelector('.card');if(!el||innerWidth<50)return;const h=Math.ceil(el.getBoundingClientRect().height);if(h>0)parent.postMessage({type:'vc-embed-height',id:'mamdani-poll-tracker',height:h},'*');};addEventListener('load',ph);addEventListener('resize',ph);let n=0;const t=setInterval(()=>{ph();if(++n>20)clearInterval(t);},300);}
+const COL={approval:'--c-app',performance:'--c-perf',favorability:'--c-fav'},NAME={approval:'Job approval',performance:'Performance',favorability:'Favorability'};
+const MC={'Eric Adams':'#707175','Bill de Blasio':'#9b9fbc','Michael Bloomberg':'#cea9be','Rudolph Giuliani':'#b8a25a'};
+let P=[],S=[],MAY=null,TIPS=[];
+const SHORT={'Marist Institute for Public Opinion (Marist Poll)':'Marist','Emerson College Polling':'Emerson','Honan Strategy Group (5 Borough Barometer)':'Honan Strategy Group','Suffolk University Political Research Center (CityView)':'Suffolk','Siena Research Institute':'Siena','Quinnipiac University':'Quinnipiac','Marist Poll':'Marist','Marist Poll (Marist Institute for Public Opinion)':'Marist','Siena College Research Institute':'Siena'};const sn=p=>SHORT[p.pollster]||p.pollster;
+const D=s=>new Date(s+'T12:00');
+const mid=p=>new Date((D(p.field_start).getTime()+D(p.field_end).getTime())/2);
+const fd=(a,b,yr)=>{const A=D(a),B=D(b),M=d=>d.toLocaleString('en',{month:'short'});const y=yr?`, ${B.getFullYear()}`:'';return A.getMonth()===B.getMonth()?`${M(A)} ${A.getDate()} to ${B.getDate()}${y}`:`${M(A)} ${A.getDate()} to ${M(B)} ${B.getDate()}${y}`;};
+const nOf=(p,pop)=>{const x=(p.subsamples||[]).find(q=>q.population===pop);return x?x.n:p.n;};
+const POPN={adults:'all adults',RV:'registered voters',LV:'likely voters'};const pn=s=>POPN[(s||'').replace('NYS ','')]||s||'population not stated';
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+fetch('data/polls.json').then(r=>r.json()).then(d=>{P=d.polls.filter(p=>p.field_start&&p.field_end).map(p=>({...p,mid:mid(p)}));S=(d.statewide_context||[]).filter(p=>p.field_start&&p.field_end&&p.nyc_subsample&&p.nyc_subsample.favorable!=null&&!/LOW/.test(p.confidence||'')).map(p=>({...p,mid:mid(p)}));
+ document.getElementById('compiled').textContent=d.compiled||'';draw();table();stats();
+ fetch('data/prior-mayors.json').then(r=>r.ok?r.json():null).then(m=>{if(!m)return;MAY=m;const sel=document.getElementById('may');m.mayors.filter(x=>x.polls&&x.polls.length).forEach(x=>{const o=document.createElement('option');o.value=x.name;o.textContent=`${x.name} (${(x.inaugurated||'').slice(0,4)})`;sel.appendChild(o);});const o=document.createElement('option');o.value='*';o.textContent='all four';sel.appendChild(o);document.getElementById('maylab').style.display='';}).catch(()=>{});}).catch(()=>{document.getElementById('lede').textContent='No verified polls loaded yet.';});
+function rows(){const out=[];P.forEach(p=>(p.measures||[]).forEach(m=>{if(m.approve_or_positive!=null)out.push({p,m,pop:m.population||p.population,n:nOf(p,m.population||p.population)});}));return out;}
+function stats(){if(!P.length){document.getElementById('lede').textContent='No verified polls loaded yet.';return;}
+ const R=rows(),ap=R.filter(r=>r.m.type==='approval'),pf=R.filter(r=>r.m.type==='performance');
+ const lo=Math.min(...ap.map(r=>r.m.approve_or_positive)),hi=Math.max(...ap.map(r=>r.m.approve_or_positive)),dlo=Math.min(...ap.map(r=>r.m.disapprove_or_negative)),dhi=Math.max(...ap.map(r=>r.m.disapprove_or_negative));
+ const la=ap.slice().sort((a,b)=>b.p.mid-a.p.mid)[0],lp=pf.slice().sort((a,b)=>b.p.mid-a.p.mid)[0];
+ document.getElementById('finding').textContent=`Mamdani's job approval has run between ${lo} and ${hi} percent in citywide polls this year, with disapproval between ${dlo} and ${dhi}`;
+ const f=(d)=>D(d).toLocaleString('en',{month:'short',day:'numeric'});
+ document.getElementById('lede').innerHTML=`<b>${P.length}</b> citywide polls from <b>${new Set(P.map(p=>p.pollster)).size}</b> pollsters since Mamdani took office on January 1, plus <b>${S.length}</b> city subsamples of statewide polls. Approval, performance grades and favorability are different questions; the boxes below show the most recent citywide poll that asked each one, and the chart and table keep them apart. Updated when a new poll is released.`;
+ const pick=(type)=>{const c=R.filter(r=>r.m.type===type).sort((a,b)=>(b.p.mid-a.p.mid)||(a.pop==='RV'?-1:b.pop==='RV'?1:0));return c[0];};
+ const sub=S.slice().sort((a,b)=>b.mid-a.mid)[0];
+ const box=(type,r,extra)=>{if(!r)return `<div><div class="l">${NAME[type]}</div><div class="n">–</div><div class="s">No citywide poll has asked this yet.</div>${extra||''}</div>`;const m=r.m,pos=type==='performance'?'excellent or good':type==='favorability'?'favorable':'approve',neg=type==='performance'?'fair or poor':type==='favorability'?'unfavorable':'disapprove';const uns=m.unsure!=null?`, ${m.unsure}% ${/neutral/i.test(m.wording||'')?'neutral or unsure':'unsure'}`:'';
+  return `<div><div class="l">${NAME[type]}, latest poll</div><div class="n">${m.approve_or_positive}%<span>${pos}</span></div><div class="s">${m.disapprove_or_negative}% ${neg}${uns}</div><div class="src">${sn(r.p)}${r.p.sponsor?' / '+r.p.sponsor:''}, ${fd(r.p.field_start,r.p.field_end)}, ${pn(r.pop)}, n=${r.n}</div>${extra||''}</div>`;};
+ const subline=sub?`<div class="src">Latest city column of a statewide poll: ${sub.nyc_subsample.favorable}% favorable${sub.nyc_subsample.unfavorable!=null?', '+sub.nyc_subsample.unfavorable+'% unfavorable':''}, ${sn(sub)}, ${fd(sub.field_start,sub.field_end)}, ${pn(sub.population)}</div>`:'';
+ document.getElementById('stats').innerHTML=box('approval',pick('approval'))+box('performance',pick('performance'))+box('favorability',pick('favorability'),subline);}
+function on(){return new Set([...document.querySelectorAll('#ctl input:checked')].map(i=>i.dataset.t));}
+function tip(html){TIPS.push(html);return `class="pt" data-i="${TIPS.length-1}"`;}
+function draw(){const s=document.getElementById('chart'),cs=getComputedStyle(s),t=n=>cs.getPropertyValue(n).trim();const pop=document.getElementById('pop').value,o=on();TIPS=[];
+ const W=Math.max(300,s.clientWidth||860),H=parseFloat(cs.height)||360,L=38,R=14,T=14,B=28;s.setAttribute('viewBox',`0 0 ${W} ${H}`);
+ const x0=new Date(2026,0,1),x1=new Date();x1.setMonth(x1.getMonth()+1);const X=v=>L+(v-x0)/(x1-x0)*(W-L-R),Y=v=>T+(1-v/100)*(H-T-B);const FF='font-family="halyard-text,sans-serif"';
+ let g='';for(const v of [0,25,50,75,100])g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#dddddd"/><text x="${L-6}" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="#707175" ${FF}>${v}%</text>`;
+ const step=W<520?2:1;for(let m=0;m<12;m+=step){const dt=new Date(2026,m,1);if(dt>x1)break;const lx=X(dt),end=lx>W-R-24;g+=`<text x="${end?W-R:lx}" y="${H-9}" font-size="11" fill="#707175" ${FF}${end?' text-anchor="end"':''}>${dt.toLocaleString('en',{month:'short'})}</text>`;}
+ const mv=document.getElementById('may').value,note=document.getElementById('maynote');note.style.display='none';document.getElementById('tip').style.display='none';
+ if(MAY&&mv){const base=new Date(2026,0,1),used=[],missing=[];let anyEG=false;MAY.mayors.filter(x=>mv==='*'||x.name===mv).forEach(x=>{const c=MC[x.name]||'#707175';const all=x.polls.filter(q=>q.approve!=null&&q.months_since_inauguration!=null),pts=all.map(q=>({q,x:X(new Date(base.getFullYear(),base.getMonth(),base.getDate()+q.months_since_inauguration*30.4375)),y:Y(q.approve)})).filter(p=>p.x<=W-R).sort((a,b)=>a.x-b.x);if(!pts.length){if(all.length)missing.push({x,q:all.slice().sort((a,b)=>a.months_since_inauguration-b.months_since_inauguration)[0]});return;}used.push(x);
+  const line=pts.filter(p=>p.q.metric!=='excellent_good');if(line.length>1)g+=`<polyline points="${line.map(p=>p.x.toFixed(1)+','+p.y.toFixed(1)).join(' ')}" fill="none" stroke="${c}" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+  pts.forEach(p=>{const q=p.q,eg=q.metric==='excellent_good';if(eg)anyEG=true;const yr=(x.inaugurated||'').slice(0,4);const when=q.field_start&&q.field_end?fd(q.field_start,q.field_end,true):`field dates not published; Marist trend table gives ${esc((q.quote||'').match(/[A-Z][a-z]+ \d{4}/)?.[0]||yr)}`;
+   const head=eg?`${q.approve}% excellent or good, ${q.disapprove}% fair or poor`:`${q.approve}% approve, ${q.disapprove!=null?q.disapprove+'% disapprove':'disapproval not recorded'}`;
+   const meta=`${q.subsample?esc(q.subsample)+', n='+q.n:pn(q.population)+(q.n?', n='+q.n:'')}${q.unsure!=null&&!q.unsure_basis?', '+q.unsure+'% unsure':''}, ${q.months_since_inauguration} months into his first term${/MEDIUM/.test(q.confidence||'')?'; field dates and sample size from news coverage':''}`;
+   const a=tip(`<b>${esc(x.name)}: ${head}</b>${esc(sn(q))}${q.sponsor?' for '+esc(q.sponsor):''}, ${when}<br><span class="k">${esc(meta)}</span>`);
+   g+=eg?`<rect x="${p.x-5.5}" y="${p.y-5.5}" width="11" height="11" fill="#fff" stroke="${c}" stroke-width="2" ${a}/>`:`<circle cx="${p.x}" cy="${p.y}" r="6" fill="#fff" stroke="${c}" stroke-width="2" ${a}/>`;});
+  const l=pts[pts.length-1];g+=`<text x="${l.x+9}" y="${l.y+4}" font-size="11" fill="${c}" ${FF} font-weight="700">${x.name.split(' ').pop()}</text>`;});
+  const miss=missing.map(({x,q})=>`${esc(x.name)}'s earliest verified first-year reading (${esc(sn(q))}, ${q.field_start?fd(q.field_start,q.field_end,true):esc((q.quote||'').match(/[A-Z][a-z]+ \d{4}/)?.[0]||'')}, ${q.months_since_inauguration} months in) falls past the months shown so far.`).join(' ');
+  if(!used.length&&miss){note.textContent=miss;note.style.display='';}
+  if(used.length){note.innerHTML=(miss?miss+' ':'')+`Hollow marks: ${used.map(x=>`<span style="color:${MC[x.name]||'#707175'};font-weight:700">${esc(x.name)}</span> (took office ${(x.inaugurated||'').slice(0,4)})`).join(', ')} in the first year in office, placed by months since inauguration. Circles joined by a dotted line are approve-or-disapprove questions, Quinnipiac among registered voters or the Times and CBS among all adults${anyEG?'; squares are Marist or Siena excellent, good, fair or poor grades, counted excellent plus good, which run lower and are not on the line':''}. Hover a point for the pollster and who was surveyed.`;note.style.display='';}}
+ if(o.has('subsample')&&!pop){const c=t('--c-fav');S.forEach(p=>{const x=X(p.mid),y=Y(p.nyc_subsample.favorable);g+=`<polygon points="${x},${y-8} ${x+7},${y+5} ${x-7},${y+5}" fill="#fff" stroke="${c}" stroke-width="2" ${tip(`<b>${p.nyc_subsample.favorable}% favorable${p.nyc_subsample.unfavorable!=null?', '+p.nyc_subsample.unfavorable+'% unfavorable':''}</b>${esc(sn(p))}, ${fd(p.field_start,p.field_end)}<br><span class="k">New York City column of a statewide poll of ${p.n||'?'} ${pn(p.population)}; city sample size not published</span>`)}/>`;});}
+ rows().filter(r=>o.has(r.m.type)&&(!pop||r.pop===pop)).sort((a,b)=>a.p.mid-b.p.mid).forEach(({p,m,pop})=>{const x=X(p.mid),y=Y(m.approve_or_positive),c=t(COL[m.type]);const neg=m.type==='performance'?`${m.disapprove_or_negative}% fair or poor`:m.type==='favorability'?`${m.disapprove_or_negative}% unfavorable`:`${m.disapprove_or_negative}% disapprove`;const posw=m.type==='performance'?'excellent or good':m.type==='favorability'?'favorable':'approve';
+  const a=tip(`<b>${m.approve_or_positive}% ${posw}, ${neg}</b>${esc(sn(p))}${p.sponsor?' / '+esc(p.sponsor):''}, ${fd(p.field_start,p.field_end)}<br><span class="k">${NAME[m.type]} question; ${pn(pop)}, n=${nOf(p,pop)}${m.unsure!=null?', '+m.unsure+'% unsure'+(/neutral/i.test(m.wording||'')?' or neutral':''):''}</span>`);
+  g+=m.type==='approval'?`<circle cx="${x}" cy="${y}" r="7" fill="${c}" ${a}/>`:m.type==='performance'?`<rect x="${x-6}" y="${y-6}" width="12" height="12" fill="${c}" ${a}/>`:`<polygon points="${x},${y-8} ${x+7},${y+5} ${x-7},${y+5}" fill="${c}" ${a}/>`;});
+ s.innerHTML=g;}
+(function(){const s=document.getElementById('chart'),tp=document.getElementById('tip'),wrap=s.parentNode;let cur=null;
+ const show=el=>{const i=el.dataset.i;if(i==null)return;cur=el;tp.innerHTML=TIPS[i];tp.style.display='block';const wr=wrap.getBoundingClientRect(),er=el.getBoundingClientRect();let x=er.left-wr.left+er.width/2+10,y=er.top-wr.top-10;const tw=tp.offsetWidth;if(x+tw>wr.width)x=er.left-wr.left-tw-10;if(x<0)x=4;if(y+tp.offsetHeight>wr.height)y=wr.height-tp.offsetHeight-4;tp.style.left=x+'px';tp.style.top=Math.max(0,y)+'px';};
+ const hide=()=>{cur=null;tp.style.display='none';};
+ s.addEventListener('mouseover',e=>{const el=e.target.closest('.pt');if(el)show(el);});
+ s.addEventListener('mouseout',e=>{const el=e.target.closest('.pt');if(el&&el===cur)hide();});
+ s.addEventListener('click',e=>{const el=e.target.closest('.pt');if(!el){hide();return;}if(cur===el)hide();else show(el);});
+ document.addEventListener('click',e=>{if(!wrap.contains(e.target))hide();});})();
+function table(){const items=[];
+ P.forEach(p=>items.push({mid:p.mid,kind:'poll',p}));S.forEach(p=>items.push({mid:p.mid,kind:'sub',p}));
+ const tb=[];items.sort((a,b)=>b.mid-a.mid).forEach(it=>{const p=it.p;
+  if(it.kind==='sub'){const u=p.nyc_subsample;tb.push(`<tr class="sub"><td>${fd(p.field_start,p.field_end)}</td><td>${sn(p)}, statewide</td><td class="hide-m">${pn(p.population)}, city column</td><td class="n hide-m">not published</td><td>Favorability, city subsample<span class="m-only">${pn(p.population)}, city column of a statewide poll</span></td><td class="pos">${u.favorable}%</td><td class="n">${u.unfavorable!=null?u.unfavorable+'%':'not published'}</td><td class="n hide-m">${u.dk!=null?u.dk+'%':''}</td><td><a href="${p.crosstabs_url||p.url}" target="_blank" rel="noopener">source</a></td></tr>`);return;}
+  const ms=(p.measures||[]);ms.forEach((m,i)=>{const pop=m.population||p.population;const link=`<a href="${p.url}" target="_blank" rel="noopener">source</a>`;const first=i===0,cls=i<ms.length-1?' class="mid"':'';const dc=first?fd(p.field_start,p.field_end):'',pc=first?sn(p)+(p.sponsor?' / '+p.sponsor:''):'';const mob=`<span class="m-only">${pn(pop)}${nOf(p,pop)?', n='+nOf(p,pop):''}</span>`;
+   if(m.approve_or_positive==null){const sp=(p.splits||[]).map(x=>`${x.group.replace(/ \(n=\d+\)/,'')} ${x.value}% approve, ${x.disapprove}% disapprove`).join('; ');tb.push(`<tr${cls}><td>${dc}</td><td>${pc}</td><td class="hide-m">${pn(pop)}</td><td class="n hide-m">${nOf(p,pop)??''}</td><td colspan="3">${NAME[m.type]}: no citywide topline published. ${sp}.${mob}</td><td class="hide-m"></td><td>${link}</td></tr>`);return;}
+   const neu=m.unsure!=null?m.unsure+'%'+(/neutral/i.test(m.wording||'')?' (neutral offered)':''):'';
+   tb.push(`<tr${cls}><td>${dc}</td><td>${pc}</td><td class="hide-m">${pn(pop)}</td><td class="n hide-m">${nOf(p,pop)??''}</td><td>${NAME[m.type]}${m.buckets?' (excellent '+m.buckets.excellent+', good '+m.buckets.good+')':''}${mob}</td><td class="pos">${m.approve_or_positive}%</td><td class="n">${m.disapprove_or_negative??''}${m.disapprove_or_negative!=null?'%':''}</td><td class="n hide-m">${neu}</td><td>${link}</td></tr>`);});});
+ document.querySelector('#tbl tbody').innerHTML=tb.join('');}
+document.getElementById('ctl').addEventListener('change',draw);let rt,lw=0;const rd=()=>{clearTimeout(rt);rt=setTimeout(()=>{const w=document.getElementById('chart').clientWidth;if(w!==lw){lw=w;draw();}},80);};addEventListener('resize',rd);if(window.ResizeObserver)new ResizeObserver(rd).observe(document.getElementById('chart'));
+</script></body></html>

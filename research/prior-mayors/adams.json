@@ -1,0 +1,152 @@
+{
+  "mayor": "Eric Adams",
+  "inaugurated": "2022-01-01",
+  "window": "2022-01-01 to 2022-12-31 (field dates)",
+  "compiled": "2026-10-02",
+  "polls": [
+    {
+      "type": "approval",
+      "pollster": "Quinnipiac University",
+      "sponsor": null,
+      "release_date": "2022-02-09",
+      "field_start": "2022-02-03",
+      "field_end": "2022-02-07",
+      "population": "RV",
+      "n": 1343,
+      "moe": 2.7,
+      "approve": 46,
+      "disapprove": 27,
+      "unsure": 27,
+      "question": "Do you approve or disapprove of the way Eric Adams is handling his job as mayor?",
+      "url": "https://poll.qu.edu/poll-release?ReleaseID=3834",
+      "pdf_url": "https://poll.qu.edu/images/polling/nyc/nyc02092022_nywx73.pdf",
+      "quote": "With roughly five weeks on the job as New York City mayor, voters approve 46 – 27 percent of the job Adams is doing so far with 27 percent not offering an opinion. [...] 1,343 New York City registered voters were surveyed from February 3rd – 7th with a margin of error of +/- 2.7 percentage points.",
+      "fetched_via": "direct"
+    },
+    {
+      "type": "approval",
+      "pollster": "Marist Poll",
+      "sponsor": null,
+      "release_date": "2022-03-14",
+      "field_start": "2022-03-01",
+      "field_end": "2022-03-08",
+      "population": "adults",
+      "n": 891,
+      "moe": 4.1,
+      "approve": 61,
+      "disapprove": 24,
+      "unsure": 15,
+      "question": "Do you approve or disapprove of the job Eric Adams is doing as mayor?",
+      "also_performance": {"excellent": 9, "good": 29, "excellent_good": 38, "fair": 37, "poor": 14, "unsure": 10, "question": "Would you rate the job Mayor Eric Adams is doing in office as excellent, good, fair, or poor?"},
+      "url": "https://maristpoll.marist.edu/polls/marist-new-york-city-poll-mayor-eric-adams-job-performance-march-2022/",
+      "pdf_url": "https://maristpoll.marist.edu/wp-content/uploads/2022/03/Marist-Poll_NYC-NOS-and-Tables_202203091244.pdf",
+      "quote": "Many New York City residents (61%) approve of the job Eric Adams is doing as mayor. 24% disapprove. [...] A notable 15% are unsure. [...] 38% of city residents, including 40% of registered voters, think Adams is an excellent (9%) or good (29%) mayor.",
+      "fetched_via": "direct",
+      "note": "Release page reports the adults topline. No media sponsor named on the page (not a NY1 poll)."
+    },
+    {
+      "type": "approval",
+      "pollster": "Marist Poll",
+      "sponsor": null,
+      "release_date": "2022-03-14",
+      "field_start": "2022-03-01",
+      "field_end": "2022-03-08",
+      "population": "RV",
+      "n": 745,
+      "moe": 4.5,
+      "approve": 62,
+      "disapprove": 25,
+      "unsure": 13,
+      "question": "Do you approve or disapprove of the job Eric Adams is doing as mayor?",
+      "also_performance": {"excellent": 9, "good": 31, "excellent_good": 40, "fair": 37, "poor": 14, "unsure": 9},
+      "url": "https://maristpoll.marist.edu/wp-content/uploads/2022/03/Marist-Poll_NYC-NOS-and-Tables_202203091244.pdf",
+      "quote": "Table ADAE105, 'Do you approve or disapprove of the job Eric Adams is doing as mayor?': NYC Adults 61% 24% 15%; NYC Registered Voters 62% 25% 13% (Approve / Disapprove / Vol: Unsure). Nature of the sample: 'There are 745 registered voters.' 'New York City Registered Voters: n=745 MOE +/- 4.5 percentage points.'",
+      "fetched_via": "direct",
+      "note": "RV subsample from the crosstab PDF; the release page gives only the adults approval topline. Quote is a table row, not prose. Same fieldwork as the adults entry; do not count as a separate poll."
+    },
+    {
+      "type": "approval",
+      "pollster": "Quinnipiac University",
+      "sponsor": null,
+      "release_date": "2022-05-04",
+      "field_start": "2022-04-28",
+      "field_end": "2022-05-02",
+      "population": "RV",
+      "n": 1249,
+      "moe": 2.8,
+      "approve": 43,
+      "disapprove": 37,
+      "unsure": 20,
+      "question": "Do you approve or disapprove of the way Eric Adams is handling his job as mayor?",
+      "url": "https://poll.qu.edu/poll-release?ReleaseID=3845",
+      "pdf_url": "https://poll.qu.edu/images/polling/nyc/nyc05042022_nydg85.pdf",
+      "quote": "Voters give Mayor Eric Adams a 43 – 37 percent job approval rating with 20 percent not offering an opinion. In Quinnipiac's previous New York City poll released on February 9, 2022, voters gave Adams a 46 – 27 percent job approval rating with 27 percent not offering an opinion. [...] 1,249 New York City registered voters were surveyed from April 28th – May 2nd with a margin of error of +/- 2.8 percentage points.",
+      "fetched_via": "direct"
+    },
+    {
+      "type": "performance",
+      "pollster": "Siena College Research Institute",
+      "sponsor": "Spectrum News NY1",
+      "release_date": "2022-06-07",
+      "field_start": "2022-05-22",
+      "field_end": "2022-06-01",
+      "population": "adults",
+      "n": 1000,
+      "moe": 3.1,
+      "excellent_good": 29,
+      "fair_poor": 64,
+      "approve": null,
+      "disapprove": null,
+      "unsure": null,
+      "question": "How would you rate the job that Eric Adams is doing as Mayor? Would you rate it as excellent, good, fair, or poor?",
+      "url": "https://sri.siena.edu/2022/06/07/big-apple-is-sour-on-the-job-mayor-adams-is-doing-only-29-rate-his-job-performance-positively-but-53-like-his-style/",
+      "pdf_url": "https://scri.siena.edu/wp-content/uploads/2022/06/Spectrum-NYC-6-7-22-PR-Final.pdf",
+      "quote": "While 29% of New York City adults think Mayor Eric Adams is doing an excellent or good job as mayor, 64% say he's doing only a fair or poor job. [...] But by a 53-37% margin, City residents approve of the mayor's style, according to a new Spectrum News NY1/Siena College Poll of New York City residents released today.",
+      "fetched_via": "direct",
+      "note": "No approve/disapprove job question in this poll; the 53-37 figure is about the mayor's 'style', not job approval. Sample described as 'New York City residents' / 'New York City adults'. News coverage gives the split as fair 35, poor 29 (not confirmed on the release page itself)."
+    }
+  ],
+  "unverified": [
+    {
+      "lead": "Quinnipiac 'summer 2022' NYC poll",
+      "status": "does not exist",
+      "why": "Quinnipiac's own trend tables (nyc05042022_trends_nydg85.pdf and nyc12062023_trends_nzzt98.pdf) list every NYC Adams approval reading: Feb 09 2022, May 04 2022, Feb 01 2023, Dec 06 2023. Nothing fielded between May 2022 and Jan 2023. ReleaseIDs 3845-3850 (May-June 2022) were also probed directly; none is an NYC poll."
+    },
+    {
+      "lead": "Siena College, Jan 9-13 2022: Adams rated excellent/good by 63% of NYC voters (the '63% six months earlier' comparison in June 2022 coverage)",
+      "status": "excluded, not citywide",
+      "why": "This was Siena's statewide New York poll (806 RV statewide, per NBC New York coverage of the Jan 18 2022 release). The 63% is an NYC subsample of a statewide poll, which the brief excludes. Siena's own release page was not fetched."
+    },
+    {
+      "lead": "Emerson College / PIX11 / The Hill, May 2022 and Aug 2022",
+      "status": "excluded, not citywide",
+      "why": "Emerson's NYC category page lists only two 2022 polls, both congressional-district samples (NY-10 and NY-12 Democratic primary voters). The Aug 2022 NY-12 poll had Adams at 25.3 approve / 49.8 disapprove among NY-12 likely primary voters. Not a citywide sample."
+    },
+    {
+      "lead": "Slingshot Strategies poll, '24% say Adams deserves a second term' (1,424 voters, released to Politico)",
+      "status": "wrong year",
+      "why": "Hell Gate's write-up of this poll is dated June 27 2024. No 2022 Slingshot citywide poll was found; slingshotstrat.com/news lists nothing from 2022."
+    },
+    {
+      "lead": "Data for Progress NYC poll, 2022",
+      "status": "not found",
+      "why": "Searches turned up no 2022 Data for Progress poll of Adams' NYC approval. The earliest DFP NYC Adams approval poll found is Sept 13-20 2024 (67% disapprove)."
+    },
+    {
+      "lead": "City & State / Honan Strategy Group, May 2022 (19% excellent/good)",
+      "status": "excluded, not a public sample",
+      "why": "A survey of 'political insiders', not NYC voters or residents."
+    },
+    {
+      "lead": "Any Marist/NY1 NYC poll later in 2022",
+      "status": "not found",
+      "why": "Marist's only 2022 NYC poll found is the March 1-8 release (Marist's own, no NY1 sponsor named). The next Marist NYC poll found is Nov 2023."
+    },
+    {
+      "lead": "Any Siena/NY1 NYC-only poll in fall 2022",
+      "status": "not found",
+      "why": "Searches of sri.siena.edu and ny1.com turned up only the June 7 2022 release as a city-only poll in 2022. Siena's fall 2022 polls were statewide gubernatorial polls."
+    }
+  ],
+  "self_audit": "Every poll in 'polls' was fetched from the pollster's own domain (poll.qu.edu, maristpoll.marist.edu, sri.siena.edu/scri.siena.edu); none required web.archive.org (which WebFetch could not reach anyway). Quinnipiac numbers were read from both the release HTML and the PDF text and match the trend tables exactly. Marist adults numbers are from the release page; the Marist RV approval (62/25/13) is from the crosstab PDF table rows, which pypdf extracted in a way that required inferring row labels from the table's Adults/RV row order; the RV excellent/good total (40%) is independently confirmed by the release page's '40% of registered voters' sentence, which supports the row-order reading. Siena's 29/64 is verbatim from the release. The Siena fair/poor split (35/29) comes from news coverage, not the release, and is flagged as such. Marist's own curl was blocked by Cloudflare, so its page was read through WebFetch only. Not done: fetching Siena's Jan 2022 statewide release page (excluded anyway as a statewide subsample)."
+}

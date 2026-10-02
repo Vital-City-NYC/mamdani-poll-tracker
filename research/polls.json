@@ -1,0 +1,1019 @@
+{
+  "compiled": "2026-10-02",
+  "notes": "Citywide polls of New York City adults, registered voters or likely voters, fielded Jan 1 to Oct 2, 2026, that measured Mayor Mamdani's job approval, performance rating or favorability. Only four qualifying citywide releases were found and verified: Marist (adults+RV, approval and favorability), Emerson/PIX11 (RV approval), Honan Strategy Group (LV approval, which publishes only the Jewish/non-Jewish split), Suffolk (RV excellent/good/fair/poor performance). The three measure types are not interchangeable. Approval is a binary approve/disapprove question. Performance is a four-point scale on which 'fair' is counted as negative. Favorability is about the person, not the job. 'statewide_context' holds statewide polls (Siena, Quinnipiac, Data for Progress) that report a New York City regional subsample. They are NOT citywide polls, and their NYC subsample sizes are unpublished, so keep them off the main series or label them clearly. Split entries: 'value' = approve/positive %, 'disapprove' = disapprove/negative %. Excluded: congressional-district polls of Democratic primary voters (Emerson/PIX11 May 16-17, 2026, NY-7/10/12), PPP NY-12 (Feb 26-27, 2026) and the Honan December 2025 poll (fielded before the inauguration). The New York Times article from about Oct 1-2, 2026 could not be reached (nytimes.com is blocked for this agent's tools). See gaps.md.",
+  "polls": [
+    {
+      "id": "marist-20260408",
+      "pollster": "Marist Institute for Public Opinion (Marist Poll)",
+      "sponsor": null,
+      "field_start": "2026-03-26",
+      "field_end": "2026-03-31",
+      "release_date": "2026-04-08",
+      "population": "adults",
+      "n": 1454,
+      "moe": 3.3,
+      "mode": "multi-mode: live-interviewer phone (402), text (714), online panel (338)",
+      "subsamples": [
+        {
+          "population": "RV",
+          "n": 1247,
+          "moe": 3.5
+        }
+      ],
+      "measures": [
+        {
+          "type": "approval",
+          "population": "adults",
+          "approve_or_positive": 48,
+          "disapprove_or_negative": 30,
+          "unsure": 23,
+          "buckets": null,
+          "strength": {
+            "strongly_approve": 25,
+            "approve": 23,
+            "disapprove": 9,
+            "strongly_disapprove": 21,
+            "unsure": 23
+          },
+          "wording": "Do you approve or disapprove of the job Zohran Mamdani is doing as mayor? [And, would you say you strongly approve/disapprove of the job he is doing or just approve/disapprove?]"
+        },
+        {
+          "type": "approval",
+          "population": "RV",
+          "approve_or_positive": 49,
+          "disapprove_or_negative": 31,
+          "unsure": 20,
+          "buckets": null,
+          "strength": {
+            "strongly_approve": 25,
+            "approve": 24,
+            "disapprove": 9,
+            "strongly_disapprove": 22,
+            "unsure": 20
+          },
+          "wording": "Do you approve or disapprove of the job Zohran Mamdani is doing as mayor?"
+        },
+        {
+          "type": "favorability",
+          "population": "adults",
+          "approve_or_positive": 55,
+          "disapprove_or_negative": 33,
+          "unsure": 12,
+          "buckets": null,
+          "strength": {
+            "very_favorable": 29,
+            "somewhat_favorable": 26,
+            "somewhat_unfavorable": 12,
+            "very_unfavorable": 22,
+            "unsure_never_heard": 12
+          },
+          "wording": "In general, do you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable impression of Zohran Mamdani?"
+        },
+        {
+          "type": "favorability",
+          "population": "RV",
+          "approve_or_positive": 55,
+          "disapprove_or_negative": 35,
+          "unsure": 10,
+          "buckets": null,
+          "strength": {
+            "very_favorable": 31,
+            "somewhat_favorable": 24,
+            "somewhat_unfavorable": 12,
+            "very_unfavorable": 22,
+            "unsure_never_heard": 10
+          },
+          "wording": "In general, do you have a very favorable, somewhat favorable, somewhat unfavorable or very unfavorable impression of Zohran Mamdani?"
+        }
+      ],
+      "issues": [
+        {
+          "topic": "Handling of this winter's snow storms",
+          "approve": 65,
+          "disapprove": 34,
+          "population": "adults",
+          "wording": "Do you approve or disapprove of how Mayor Zohran Mamdani and his administration handled the snow storms this winter?"
+        }
+      ],
+      "splits": [
+        {
+          "dimension": "party",
+          "group": "Democrat",
+          "measure_type": "approval",
+          "value": 63,
+          "disapprove": 20,
+          "population": "adults"
+        },
+        {
+          "dimension": "party",
+          "group": "Republican",
+          "measure_type": "approval",
+          "value": 25,
+          "disapprove": 63,
+          "population": "adults"
+        },
+        {
+          "dimension": "party",
+          "group": "Non-enrolled",
+          "measure_type": "approval",
+          "value": 27,
+          "disapprove": 41,
+          "population": "adults"
+        },
+        {
+          "dimension": "borough",
+          "group": "Bronx",
+          "measure_type": "approval",
+          "value": 45,
+          "disapprove": 19,
+          "population": "adults"
+        },
+        {
+          "dimension": "borough",
+          "group": "Brooklyn",
+          "measure_type": "approval",
+          "value": 54,
+          "disapprove": 26,
+          "population": "adults"
+        },
+        {
+          "dimension": "borough",
+          "group": "Manhattan",
+          "measure_type": "approval",
+          "value": 55,
+          "disapprove": 29,
+          "population": "adults"
+        },
+        {
+          "dimension": "borough",
+          "group": "Queens",
+          "measure_type": "approval",
+          "value": 42,
+          "disapprove": 34,
+          "population": "adults"
+        },
+        {
+          "dimension": "borough",
+          "group": "Staten Island",
+          "measure_type": "approval",
+          "value": 27,
+          "disapprove": 57,
+          "population": "adults"
+        },
+        {
+          "dimension": "gender",
+          "group": "Men",
+          "measure_type": "approval",
+          "value": 50,
+          "disapprove": 33,
+          "population": "adults"
+        },
+        {
+          "dimension": "gender",
+          "group": "Women",
+          "measure_type": "approval",
+          "value": 47,
+          "disapprove": 26,
+          "population": "adults"
+        },
+        {
+          "dimension": "race",
+          "group": "White",
+          "measure_type": "approval",
+          "value": 49,
+          "disapprove": 39,
+          "population": "adults"
+        },
+        {
+          "dimension": "race",
+          "group": "Black",
+          "measure_type": "approval",
+          "value": 55,
+          "disapprove": 13,
+          "population": "adults"
+        },
+        {
+          "dimension": "race",
+          "group": "Latino",
+          "measure_type": "approval",
+          "value": 49,
+          "disapprove": 26,
+          "population": "adults"
+        },
+        {
+          "dimension": "age",
+          "group": "18 to 29",
+          "measure_type": "approval",
+          "value": 60,
+          "disapprove": 18,
+          "population": "adults"
+        },
+        {
+          "dimension": "age",
+          "group": "30 to 44",
+          "measure_type": "approval",
+          "value": 48,
+          "disapprove": 29,
+          "population": "adults"
+        },
+        {
+          "dimension": "age",
+          "group": "45 to 59",
+          "measure_type": "approval",
+          "value": 37,
+          "disapprove": 38,
+          "population": "adults"
+        },
+        {
+          "dimension": "age",
+          "group": "60 or older",
+          "measure_type": "approval",
+          "value": 48,
+          "disapprove": 32,
+          "population": "adults"
+        },
+        {
+          "dimension": "ideology",
+          "group": "Very liberal",
+          "measure_type": "approval",
+          "value": 80,
+          "disapprove": 9,
+          "population": "adults"
+        },
+        {
+          "dimension": "ideology",
+          "group": "Liberal",
+          "measure_type": "approval",
+          "value": 71,
+          "disapprove": 11,
+          "population": "adults"
+        },
+        {
+          "dimension": "ideology",
+          "group": "Moderate",
+          "measure_type": "approval",
+          "value": 40,
+          "disapprove": 30,
+          "population": "adults"
+        },
+        {
+          "dimension": "ideology",
+          "group": "Conservative/Very conservative",
+          "measure_type": "approval",
+          "value": 24,
+          "disapprove": 58,
+          "population": "adults"
+        },
+        {
+          "dimension": "religion",
+          "group": "Protestant",
+          "measure_type": "approval",
+          "value": 46,
+          "disapprove": 28,
+          "population": "adults"
+        },
+        {
+          "dimension": "religion",
+          "group": "Catholic",
+          "measure_type": "approval",
+          "value": 41,
+          "disapprove": 39,
+          "population": "adults"
+        },
+        {
+          "dimension": "religion",
+          "group": "Jewish",
+          "measure_type": "approval",
+          "value": 38,
+          "disapprove": 49,
+          "population": "adults"
+        },
+        {
+          "dimension": "religion",
+          "group": "Other/No religion",
+          "measure_type": "approval",
+          "value": 59,
+          "disapprove": 17,
+          "population": "adults"
+        },
+        {
+          "dimension": "2025 mayoral support",
+          "group": "Mamdani",
+          "measure_type": "approval",
+          "value": 86,
+          "disapprove": 2,
+          "population": "adults"
+        },
+        {
+          "dimension": "2025 mayoral support",
+          "group": "Other candidates",
+          "measure_type": "approval",
+          "value": 18,
+          "disapprove": 60,
+          "population": "adults"
+        }
+      ],
+      "url": "https://maristpoll.marist.edu/polls/mayor-mamdanis-first-100-days-april-2026/",
+      "url_tables": "https://maristpoll.marist.edu/wp-content/uploads/2026/04/Marist-Poll_NYC-NOS-and-Tables_202604021433.pdf",
+      "quote": "Nearly half of New York City residents (48%) approve of the job Mayor Mamdani is doing in office, and 30% disapprove",
+      "confidence": "HIGH",
+      "notes": "Tables PDF downloaded and checksum-matched to the public URL; RV approval (49/31/20) and all splits read from the tables. Marist's trend table labels this reading 'April 2026'. Splits are among adults; 'value' is approve %, 'disapprove' is disapprove %."
+    },
+    {
+      "id": "emerson-20260409",
+      "pollster": "Emerson College Polling",
+      "sponsor": "PIX11",
+      "field_start": "2026-04-05",
+      "field_end": "2026-04-06",
+      "release_date": "2026-04-09",
+      "population": "RV",
+      "n": 850,
+      "moe": 3.4,
+      "mode": "multi-mode: email to Aristotle voter file, MMS text-to-web (Consensus Strategies panel), PureSpectrum online panel; English only",
+      "measures": [
+        {
+          "type": "approval",
+          "population": "RV",
+          "approve_or_positive": 43,
+          "disapprove_or_negative": 27,
+          "unsure": 30,
+          "buckets": null,
+          "wording": "Do you approve or disapprove of the job Zohran Mamdani is doing as Mayor? (options: Approve / Disapprove / Neutral or no opinion)"
+        }
+      ],
+      "issues": [
+        {
+          "topic": "Childcare",
+          "approve": 54,
+          "disapprove": 21,
+          "population": "RV"
+        },
+        {
+          "topic": "Housing affordability",
+          "approve": 49,
+          "disapprove": 25,
+          "population": "RV"
+        },
+        {
+          "topic": "Public safety/policing",
+          "approve": 45,
+          "disapprove": 32,
+          "population": "RV"
+        },
+        {
+          "topic": "The city budget",
+          "approve": 40,
+          "disapprove": 37,
+          "population": "RV"
+        }
+      ],
+      "splits": [
+        {
+          "dimension": "party",
+          "group": "Democrat",
+          "measure_type": "approval",
+          "value": 49,
+          "disapprove": 21,
+          "population": "RV"
+        },
+        {
+          "dimension": "party",
+          "group": "Republican",
+          "measure_type": "approval",
+          "value": 28,
+          "disapprove": 52,
+          "population": "RV"
+        },
+        {
+          "dimension": "party",
+          "group": "Independent/other",
+          "measure_type": "approval",
+          "value": 33,
+          "disapprove": 35,
+          "population": "RV"
+        },
+        {
+          "dimension": "2025 mayoral vote",
+          "group": "Voted (all November voters)",
+          "measure_type": "approval",
+          "value": 55,
+          "disapprove": 29,
+          "population": "RV"
+        },
+        {
+          "dimension": "2025 mayoral vote",
+          "group": "Did not vote",
+          "measure_type": "approval",
+          "value": 35,
+          "disapprove": 26,
+          "population": "RV"
+        },
+        {
+          "dimension": "2025 mayoral vote",
+          "group": "Mamdani voters",
+          "measure_type": "approval",
+          "value": 88,
+          "disapprove": 5,
+          "population": "RV"
+        },
+        {
+          "dimension": "2025 mayoral vote",
+          "group": "Cuomo voters",
+          "measure_type": "approval",
+          "value": 22,
+          "disapprove": 53,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "Hispanic or Latino",
+          "measure_type": "approval",
+          "value": 32,
+          "disapprove": 23,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "White",
+          "measure_type": "approval",
+          "value": 50,
+          "disapprove": 29,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "Black",
+          "measure_type": "approval",
+          "value": 48,
+          "disapprove": 21,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "Asian",
+          "measure_type": "approval",
+          "value": 44,
+          "disapprove": 41,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "18-29",
+          "measure_type": "approval",
+          "value": 71,
+          "disapprove": 15,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "30-39",
+          "measure_type": "approval",
+          "value": 36,
+          "disapprove": 17,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "40-49",
+          "measure_type": "approval",
+          "value": 40,
+          "disapprove": 32,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "50-59",
+          "measure_type": "approval",
+          "value": 22,
+          "disapprove": 40,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "60-69",
+          "measure_type": "approval",
+          "value": 37,
+          "disapprove": 29,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "70+",
+          "measure_type": "approval",
+          "value": 47,
+          "disapprove": 36,
+          "population": "RV"
+        },
+        {
+          "dimension": "gender",
+          "group": "Male",
+          "measure_type": "approval",
+          "value": 43,
+          "disapprove": 25,
+          "population": "RV"
+        },
+        {
+          "dimension": "gender",
+          "group": "Female",
+          "measure_type": "approval",
+          "value": 44,
+          "disapprove": 30,
+          "population": "RV"
+        }
+      ],
+      "url": "https://emersoncollegepolling.com/new-york-city-2026-poll/",
+      "url_tables": "https://docs.google.com/spreadsheets/d/1-LHeXxAYPCZQ3EZX7qyYD1hFkSLfTH2s/edit?gid=913862092",
+      "quote": "A new Emerson College Polling/PIX11 survey of New York City registered voters finds Mayor Zohran Mamdani with a 43% job approval rating and 27% disapproval 100 days into his first term as Mayor. Thirty percent are neutral.",
+      "confidence": "HIGH",
+      "notes": "Release page and Emerson's linked crosstab workbook both fetched. Split values other than the voted/did-not-vote pair (quoted in the release) are rounded by me from the workbook's unrounded weighted row percentages. Emerson offers an explicit 'Neutral or no opinion' option, which inflates the middle relative to Marist's volunteered 'unsure'. Some news outlets (Lohud, Democrat and Chronicle) misreport the field dates as April 4-5."
+    },
+    {
+      "id": "honan-20260701",
+      "pollster": "Honan Strategy Group (5 Borough Barometer)",
+      "sponsor": null,
+      "field_start": "2026-06-12",
+      "field_end": "2026-06-17",
+      "release_date": "2026-07-01",
+      "population": "LV",
+      "n": 614,
+      "moe": 3.96,
+      "mode": "text-to-web, respondents recruited from NYC voter file",
+      "measures": [
+        {
+          "type": "approval",
+          "population": "LV",
+          "approve_or_positive": null,
+          "disapprove_or_negative": null,
+          "unsure": null,
+          "buckets": null,
+          "wording": "Do you approve or disapprove of the job Zohran Mamdani is doing as Mayor of New York City?"
+        }
+      ],
+      "issues": [],
+      "splits": [
+        {
+          "dimension": "religion",
+          "group": "Jewish (n=99)",
+          "measure_type": "approval",
+          "value": 28,
+          "disapprove": 72,
+          "population": "LV"
+        },
+        {
+          "dimension": "religion",
+          "group": "Non-Jewish (n=515)",
+          "measure_type": "approval",
+          "value": 67,
+          "disapprove": 28,
+          "population": "LV"
+        }
+      ],
+      "url": "https://image.jewishinsider.com/wp-content/uploads/2026/07/02153117/HSG-5-Boro-Barometer-Mamdani-Jewish-7-1-26-Final.docx-With-Watermark.pdf",
+      "quote": "Jewish voters largely disapprove of Mamdani's job performance by a 44-point margin (72% disapprove, 28% approve), while non-Jewish voters approve by 39 points (67% approve, 28% disapprove).",
+      "confidence": "HIGH",
+      "notes": "Primary HSG memo (dated July 1, 2026), hosted by Jewish Insider; PDF checksum-matched. The memo does NOT publish a topline approval figure for all 614 voters, so overall approve/disapprove are null. Do not back-calculate: the weighted Jewish share is not published. Self-described as 'conducted independently by Honan Strategy Group for research and public-interest purposes.' Exclude from any topline chart; usable only for the Jewish/non-Jewish split."
+    },
+    {
+      "id": "suffolk-20260908",
+      "pollster": "Suffolk University Political Research Center (CityView)",
+      "sponsor": null,
+      "field_start": "2026-09-01",
+      "field_end": "2026-09-03",
+      "release_date": "2026-09-08",
+      "population": "RV",
+      "n": 500,
+      "moe": 4.4,
+      "mode": "live telephone interviews; quotas from Aristotle voter registration list",
+      "measures": [
+        {
+          "type": "performance",
+          "population": "RV",
+          "approve_or_positive": 57,
+          "disapprove_or_negative": 34,
+          "unsure": 9,
+          "buckets": {
+            "excellent": 28.6,
+            "good": 28.0,
+            "fair": 17.0,
+            "poor": 17.2
+          },
+          "undecided": 8.4,
+          "refused": 0.8,
+          "wording": "How would you rate the job performance of Zohran Mamdani as mayor? {ROTATE .1-.4 ASC-DESC} (Excellent / Good / Fair / Poor)"
+        }
+      ],
+      "issues": [
+        {
+          "topic": "Mamdani asserting final say over NYPD and willingness to overrule Commissioner Tisch (strongly + somewhat)",
+          "approve": 47.8,
+          "disapprove": 33.0,
+          "population": "RV"
+        },
+        {
+          "topic": "Keeping Jessica Tisch as police commissioner: 'shows pragmatic leadership' vs 'is a contradiction' (not an approve/disapprove item)",
+          "approve": 56.2,
+          "disapprove": 20.8,
+          "population": "RV"
+        }
+      ],
+      "splits": [
+        {
+          "dimension": "gender",
+          "group": "Male",
+          "measure_type": "performance",
+          "value": 55,
+          "disapprove": 38,
+          "population": "RV"
+        },
+        {
+          "dimension": "gender",
+          "group": "Female",
+          "measure_type": "performance",
+          "value": 58,
+          "disapprove": 30,
+          "population": "RV"
+        },
+        {
+          "dimension": "borough",
+          "group": "Bronx",
+          "measure_type": "performance",
+          "value": 55,
+          "disapprove": 33,
+          "population": "RV"
+        },
+        {
+          "dimension": "borough",
+          "group": "Brooklyn (Kings)",
+          "measure_type": "performance",
+          "value": 58,
+          "disapprove": 33,
+          "population": "RV"
+        },
+        {
+          "dimension": "borough",
+          "group": "Manhattan (New York)",
+          "measure_type": "performance",
+          "value": 64,
+          "disapprove": 28,
+          "population": "RV"
+        },
+        {
+          "dimension": "borough",
+          "group": "Queens",
+          "measure_type": "performance",
+          "value": 48,
+          "disapprove": 42,
+          "population": "RV"
+        },
+        {
+          "dimension": "borough",
+          "group": "Staten Island (Richmond)",
+          "measure_type": "performance",
+          "value": 63,
+          "disapprove": 31,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "18-34",
+          "measure_type": "performance",
+          "value": 74,
+          "disapprove": 18,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "35-44",
+          "measure_type": "performance",
+          "value": 64,
+          "disapprove": 32,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "45-54",
+          "measure_type": "performance",
+          "value": 52,
+          "disapprove": 38,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "55-64",
+          "measure_type": "performance",
+          "value": 46,
+          "disapprove": 43,
+          "population": "RV"
+        },
+        {
+          "dimension": "age",
+          "group": "65+",
+          "measure_type": "performance",
+          "value": 52,
+          "disapprove": 36,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "White",
+          "measure_type": "performance",
+          "value": 56,
+          "disapprove": 38,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "Black",
+          "measure_type": "performance",
+          "value": 61,
+          "disapprove": 28,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "Hispanic",
+          "measure_type": "performance",
+          "value": 49,
+          "disapprove": 35,
+          "population": "RV"
+        },
+        {
+          "dimension": "race",
+          "group": "Asian",
+          "measure_type": "performance",
+          "value": 69,
+          "disapprove": 31,
+          "population": "RV"
+        },
+        {
+          "dimension": "party",
+          "group": "Democrat",
+          "measure_type": "performance",
+          "value": 66,
+          "disapprove": 26,
+          "population": "RV"
+        },
+        {
+          "dimension": "party",
+          "group": "Republican",
+          "measure_type": "performance",
+          "value": 16,
+          "disapprove": 75,
+          "population": "RV"
+        },
+        {
+          "dimension": "party",
+          "group": "Independent/other",
+          "measure_type": "performance",
+          "value": 41,
+          "disapprove": 43,
+          "population": "RV"
+        },
+        {
+          "dimension": "tenure",
+          "group": "Own",
+          "measure_type": "performance",
+          "value": 47,
+          "disapprove": 42,
+          "population": "RV"
+        },
+        {
+          "dimension": "tenure",
+          "group": "Rent",
+          "measure_type": "performance",
+          "value": 62,
+          "disapprove": 31,
+          "population": "RV"
+        }
+      ],
+      "url": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/city-view/2026/9_8_2026_new_york_city_press_release.pdf",
+      "url_tables": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/city-view/2026/9_8_2026_new_york_city_tables.pdf",
+      "url_marginals": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/city-view/2026/9_8_2026_new_york_city_marginals.pdf",
+      "quote": "Nearly six in 10 (57%) city voters rated Mamdani's job performance as good or excellent, while 34% indicated it was fair or poor.",
+      "confidence": "HIGH",
+      "notes": "Release, marginals and banner tables fetched from suffolk.edu. Unrounded marginals give excellent+good = 56.6% (283 of 500), which is why the Washington Post reported 56% and Suffolk 57%. 'Fair' is grouped with 'poor' as the negative side by Suffolk; this is NOT a disapproval number. Splits are 'top 2 box' (excellent+good) vs 'bottom 2 box' (fair+poor) from Suffolk's tables; Staten Island n=35, Asian n=45, Republican n=63 are very small. Also: 61.4% say Mamdani has done better than expected vs 19.0% worse."
+    }
+  ],
+  "statewide_context": [
+    {
+      "id": "siena-20260203",
+      "pollster": "Siena Research Institute",
+      "population": "NYS RV",
+      "field_start": "2026-01-26",
+      "field_end": "2026-01-28",
+      "release_date": "2026-02-03",
+      "n": 802,
+      "moe": 4.3,
+      "statewide": {
+        "favorable": 48,
+        "unfavorable": 32,
+        "dk": 20
+      },
+      "nyc_subsample": {
+        "favorable": 68,
+        "unfavorable": 20,
+        "dk": 13,
+        "source": "crosstabs, NYC column (I read it from the PDF; not stated in the release text)"
+      },
+      "wording": "Do you have a favorable or unfavorable opinion about Zohran Mamdani?",
+      "url": "https://sri.siena.edu/2026/02/03/hochul-with-her-best-ever-favorability-rating-49-40-continues-to-hold-commanding-leads-over-blakeman-54-28-among-dems-delgado-64-11/",
+      "url_tables": "https://sri.siena.edu/wp-content/uploads/2026/02/SNY0126-Crosstabs.pdf",
+      "quote": "New York City Mayor Zohran Mamdani has 48-32% favorability rating, from 46-31% in December.",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "siena-20260304",
+      "pollster": "Siena Research Institute",
+      "population": "NYS RV",
+      "field_start": "2026-02-23",
+      "field_end": "2026-02-26",
+      "release_date": "2026-03-04",
+      "n": 805,
+      "moe": 4.5,
+      "statewide": {
+        "favorable": 47,
+        "unfavorable": 35,
+        "dk": 18
+      },
+      "nyc_subsample": {
+        "favorable": 63,
+        "unfavorable": 25,
+        "dk": 12,
+        "source": "crosstabs, NYC column (SNY0226-Crosstabs.pdf, page 2, Q7), fetched 2026-10-02"
+      },
+      "wording": "Do you have a favorable or unfavorable opinion about Zohran Mamdani?",
+      "url": "https://sri.siena.edu/wp-content/uploads/2026/03/SNY-February-2026-Poll-Release-3-4-26-FINAL.pdf",
+      "quote": "Mamdani has a 47-35% favorability rating, down a little from 48-32% in January.",
+      "confidence": "HIGH",
+      "crosstabs_url": "https://sri.siena.edu/wp-content/uploads/2026/03/SNY0226-Crosstabs.pdf"
+    },
+    {
+      "id": "siena-202603",
+      "pollster": "Siena Research Institute",
+      "population": "NYS RV",
+      "field_start": null,
+      "field_end": null,
+      "release_date": null,
+      "n": null,
+      "moe": null,
+      "statewide": {
+        "favorable": 44,
+        "unfavorable": 37,
+        "dk": 19
+      },
+      "nyc_subsample": null,
+      "url": "https://sri.siena.edu/wp-content/uploads/2026/09/SNY-September-2026-Poll-Release-9-23-26.pdf",
+      "quote": "March 2026 44 37 19 (Siena trend table, Q.12, September 2026 release)",
+      "confidence": "MEDIUM (I saw only the trend-table row, not the March release)"
+    },
+    {
+      "id": "siena-202605",
+      "pollster": "Siena Research Institute",
+      "population": "NYS RV",
+      "field_start": "2026-04-27",
+      "field_end": "2026-04-30",
+      "release_date": null,
+      "n": 806,
+      "moe": 4.2,
+      "statewide": {
+        "favorable": 43,
+        "unfavorable": 40,
+        "dk": 17
+      },
+      "nyc_subsample": {
+        "favorable": 56,
+        "unfavorable": 34,
+        "dk": 10,
+        "source": "June 2026 Siena release ('up from 56-34%') and April crosstabs NYC column"
+      },
+      "url": "https://sri.siena.edu/2026/06/25/hochul-favorability-approval-ratings-edge-up-as-does-her-general-election-lead-over-blakeman-now-52-32-from-49-33/",
+      "quote": "It is now 45-34%, up from 43-40% in April.",
+      "confidence": "MEDIUM (I did not fetch the April release; numbers come from the June release text and Siena's trend table)"
+    },
+    {
+      "id": "siena-20260625",
+      "pollster": "Siena Research Institute",
+      "population": "NYS RV",
+      "field_start": "2026-06-17",
+      "field_end": "2026-06-23",
+      "release_date": "2026-06-25",
+      "n": 1120,
+      "moe": 3.6,
+      "statewide": {
+        "favorable": 45,
+        "unfavorable": 34,
+        "dk": 21
+      },
+      "nyc_subsample": {
+        "favorable": 58,
+        "unfavorable": 26,
+        "dk": 16,
+        "source": "release text + crosstabs"
+      },
+      "url": "https://sri.siena.edu/2026/06/25/hochul-favorability-approval-ratings-edge-up-as-does-her-general-election-lead-over-blakeman-now-52-32-from-49-33/",
+      "url_tables": "https://sri.siena.edu/wp-content/uploads/2026/06/SNY0626-Release-Crosstabs.pdf",
+      "quote": "In New York City, his favorability rating is 58-26%, up from 56-34%.",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "siena-202608",
+      "pollster": "Siena Research Institute",
+      "population": "NYS LV",
+      "field_start": "2026-08-03",
+      "field_end": "2026-08-06",
+      "release_date": null,
+      "n": 811,
+      "moe": 4.2,
+      "statewide": {
+        "favorable": 47,
+        "unfavorable": 44,
+        "dk": 9
+      },
+      "nyc_subsample": {
+        "favorable": 69,
+        "unfavorable": 24,
+        "dk": 8,
+        "source": "corrected crosstabs, NYC column; question asked of 691 respondents"
+      },
+      "url": "https://sri.siena.edu/wp-content/uploads/2026/08/SNY0826-Release-Crosstabs_Corrected.pdf",
+      "quote": "Q12. Zohran Mamdani Sample size=691 ... Favorable 47% (Total) / 69% (NYC); Unfavorable 44% / 24%; Don't know 9% / 8% (crosstab row as read from PDF)",
+      "confidence": "HIGH (crosstabs); the release date is unverified. Eciks.org says the press reported it Aug 12"
+    },
+    {
+      "id": "siena-20260923",
+      "pollster": "Siena Research Institute",
+      "population": "NYS LV",
+      "field_start": "2026-09-11",
+      "field_end": "2026-09-17",
+      "release_date": "2026-09-23",
+      "n": 1144,
+      "moe": 3.9,
+      "statewide": {
+        "favorable": 46,
+        "unfavorable": 44,
+        "dk": 10
+      },
+      "nyc_subsample": {
+        "favorable": 60,
+        "unfavorable": 31,
+        "dk": null,
+        "source": "release text"
+      },
+      "url": "https://sri.siena.edu/wp-content/uploads/2026/09/SNY-September-2026-Poll-Release-9-23-26.pdf",
+      "quote": "Mamdani has 46-44% favorability rating, little changed from 47-44% last month. He remains very popular with Democrats, 73-18%, and is still two-to-one favorable in New York City, 60-31%.",
+      "confidence": "HIGH",
+      "notes": "n=1,144 answered core questions (MOE 3.9); n=991 answered the full survey (MOE 4.2)."
+    },
+    {
+      "id": "quinnipiac-20260923",
+      "pollster": "Quinnipiac University",
+      "population": "NYS LV",
+      "field_start": "2026-09-17",
+      "field_end": "2026-09-20",
+      "release_date": "2026-09-23",
+      "n": 1026,
+      "moe": 4.1,
+      "statewide": {
+        "favorable": 46,
+        "unfavorable": 36,
+        "dk": 15
+      },
+      "nyc_subsample": {
+        "favorable": 60,
+        "unfavorable": 29,
+        "dk": 9,
+        "source": "release"
+      },
+      "mode": "live-interviewer RDD, landline and cell",
+      "url": "https://poll.qu.edu/poll-release?releaseid=3967",
+      "url_tables": "https://poll.qu.edu/images/polling/ny/ny09232026_nurk76.pdf",
+      "quote": "46 percent favorable, 36 percent unfavorable, 15 percent haven't heard enough about him",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "dataforprogress-20260608",
+      "pollster": "Data for Progress",
+      "population": "NYS LV",
+      "field_start": "2026-05-20",
+      "field_end": "2026-05-26",
+      "release_date": "2026-06-08",
+      "n": 719,
+      "moe": null,
+      "statewide": {
+        "favorable": 48,
+        "unfavorable": 41,
+        "dk": null,
+        "net": 7
+      },
+      "nyc_subsample": {
+        "favorable": 61,
+        "unfavorable": 35,
+        "dk": null,
+        "source": "tycoonstory.com (aggregator, unverified)"
+      },
+      "url": "https://www.dataforprogress.org/blog/2026/6/8/voters-in-new-york-believe-that-us-military-aid-to-israel-should-be-halted-and-that-israel-is-committing-a-genocide-in-gaza",
+      "quote": "New York voters report higher favorability of Senator Bernie Sanders (+15), Mayor Zohran Mamdani (+7), and Representative Alexandria Ocasio-Cortez (+3)",
+      "confidence": "MEDIUM (net +7 from DFP; 48/41 and the NYC 61/35 come from an aggregator only, LOW)"
+    }
+  ]
+}

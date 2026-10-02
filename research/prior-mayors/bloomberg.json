@@ -1,0 +1,164 @@
+{
+  "mayor": "Michael Bloomberg",
+  "inaugurated": "2002-01-01",
+  "compiled": "2026-10-02",
+  "window": "polls fielded 2002-01-01 to 2002-12-31, citywide only",
+  "polls": [
+    {
+      "pollster": "Quinnipiac University",
+      "sponsor": null,
+      "type": "approval",
+      "release_date": "2002-02-06",
+      "field_start": "2002-01-29",
+      "field_end": "2002-02-04",
+      "population": "RV",
+      "n": 1008,
+      "approve": 65,
+      "disapprove": 6,
+      "unsure": 29,
+      "question": "Do you approve or disapprove of the way Michael Bloomberg is handling his job as Mayor?",
+      "url": "https://poll.qu.edu/poll-release?releaseid=455",
+      "quote": "1. Do you approve or disapprove of the way Michael Bloomberg is handling his job as Mayor? Tot ... Approve 65% ... Disapprove 6 ... DK/NA 29. From January 29 - February 4, Quinnipiac University surveyed 1,008 New York City registered voters, with a margin of error of +/- 3.1 percent.",
+      "fetched_via": "direct",
+      "note": "Release headline is about Bush's approval in NYC; Bloomberg's approval is question 1 in the tables. The March 27, 2002 release restates it: 'In a February 6 poll by the independent Quinnipiac University, Bloomberg got a 65 - 6 percent approval, with 29 percent undecided.'"
+    },
+    {
+      "pollster": "Quinnipiac University",
+      "sponsor": null,
+      "type": "approval",
+      "release_date": "2002-03-27",
+      "field_start": "2002-03-19",
+      "field_end": "2002-03-25",
+      "population": "RV",
+      "n": 1038,
+      "approve": 62,
+      "disapprove": 16,
+      "unsure": 22,
+      "question": "Do you approve or disapprove of the way Michael Bloomberg is handling his job as Mayor?",
+      "url": "https://poll.qu.edu/poll-release?releaseid=457",
+      "quote": "By a 62 - 16 percent margin, with 22 percent undecided, New York City voters approve of the job Michael Bloomberg is doing as Mayor, according to a Quinnipiac University poll released today. ... From March 19 - 25, Quinnipiac University surveyed 1,038 New York City registered voters, with a margin of error of +/- 3 percent.",
+      "fetched_via": "direct",
+      "note": null
+    },
+    {
+      "pollster": "Quinnipiac University",
+      "sponsor": null,
+      "type": "approval",
+      "release_date": "2002-07-18",
+      "field_start": "2002-07-08",
+      "field_end": "2002-07-15",
+      "population": "RV",
+      "n": 932,
+      "approve": 57,
+      "disapprove": 23,
+      "unsure": 19,
+      "question": "Do you approve or disapprove of the way Michael Bloomberg is handling his job as Mayor?",
+      "url": "https://poll.qu.edu/poll-release?releaseid=461",
+      "quote": "Voters approve 57 - 23 percent of the job Bloomberg is doing, compared to 62 - 16 percent in a March 27 poll by the independent Quinnipiac University. ... From July 8 - 15, Quinnipiac University surveyed 932 New York City registered voters, with a margin of error of +/- 3.3 percent.",
+      "fetched_via": "direct",
+      "note": "Table: Approve 57% / Disapprove 23 / DK/NA 19 (sums to 99 as published)."
+    },
+    {
+      "pollster": "Quinnipiac University",
+      "sponsor": null,
+      "type": "approval",
+      "release_date": "2002-11-21",
+      "field_start": "2002-11-13",
+      "field_end": "2002-11-19",
+      "population": "RV",
+      "n": 1004,
+      "approve": 41,
+      "disapprove": 46,
+      "unsure": 13,
+      "question": "Do you approve or disapprove of the way Michael Bloomberg is handling his job as Mayor?",
+      "url": "https://poll.qu.edu/poll-release?releaseid=462",
+      "quote": "New York City's budget woes have whacked Mayor Bloomberg's approval rating, driving it to a negative 41 - 46 percent - the lowest score for a New York City Mayor since Rudolph Giuliani's 37 - 57 percent rating April 19, 2000, according to a Quinnipiac University poll released today. ... From November 13 - 19, Quinnipiac University surveyed 1,004 New York City registered voters, with a margin of error of +/- 3.1 percent.",
+      "fetched_via": "direct",
+      "note": "Sample-size discrepancy on Quinnipiac's own pages: this release says 1,004 registered voters; the Nov 25 (releaseid=464) and Dec 4 (releaseid=465) releases from the same Nov 13-19 field say 1,322 New York City voters. Recorded as published on the approval release."
+    },
+    {
+      "pollster": "Marist College Institute for Public Opinion",
+      "sponsor": null,
+      "type": "performance",
+      "release_date": "2002-03-12",
+      "field_start": "2002-02-26",
+      "field_end": "2002-03-04",
+      "population": "RV",
+      "n": 898,
+      "excellent_good": 50,
+      "excellent": 8,
+      "good": 42,
+      "fair": 29,
+      "poor": 6,
+      "unsure": 15,
+      "question": "Would you rate the job Mayor Michael Bloomberg is doing in office as excellent, good, fair, or poor?",
+      "url": "https://web.archive.org/web/20020609151522/http://www.maristpoll.marist.edu/docs/nycpolls/020312my.htm",
+      "quote": "Mayor Michael Bloomberg's approval rating is 50% among New York City's registered voters. 8% of the electorate rates the job he is doing as excellent, 42% as good, 29% as fair, and 6% as poor. 15% are unsure. ... This survey was conducted from February 26th through March 4th, 2002. 1,280 residents of New York City were interviewed in proportion to the population in each borough. ... 898 registered voters in New York City were interviewed in proportion to the enrollment in each borough. The results for registered voters are statistically significant at +/- 3.5%.",
+      "fetched_via": "web.archive.org",
+      "note": "Wayback copy of Marist's own 2002 release page (capture 2002-06-09). No sponsor named on the release (not labeled NY1). Corroborated directly on maristpoll.marist.edu: the 'Bloomberg Approval Rating Over Time' tables published with later releases list 'March 2002 50% 8% 42% 29% 6% 15%' for NYC registered voters, e.g. https://maristpoll.marist.edu/wp-content/misc/nycpolls/c110104/Bloomberg/Bloomberg%20Approval%20Rating_Over%20Time.pdf (fetched direct). Marist's own trend table has no other 2002 reading; the next row is April 2004."
+    },
+    {
+      "pollster": "CBS News/New York Times",
+      "sponsor": "CBS News / The New York Times",
+      "type": "approval",
+      "release_date": "2002-06-10",
+      "field_start": "2002-06-04",
+      "field_end": "2002-06-09",
+      "population": "adults",
+      "n": 940,
+      "approve": 48,
+      "disapprove": 26,
+      "unsure": 26,
+      "question": "approve of the job he is doing as Mayor (CBS summary wording)",
+      "url": "https://www.cbsnews.com/news/new-york-city-nine-months-later/",
+      "quote": "Six months into his term, 48% approve of the job he is doing as Mayor, and 26% disapprove. This is similar to the evaluations New Yorkers gave former Mayor Rudolph Giuliani six months after he took office. ... This poll was conducted among a citywide random sample of 940 adults, interviewed by telephone June 4-9, 2002. The error due to sampling could be plus or minus three percentage points for results based on the entire sample.",
+      "fetched_via": "direct",
+      "note": "CBS's own page, 'New York City: Nine Months Later' (June 10, 2002), still live at this URL (the 2002 URL http://www.cbsnews.com/stories/2002/06/10/opinion/polls/main511729.shtml redirects to it; Wayback capture 2002-08-19 also checked and identical on these lines). Unsure (26) is derived as 100 - 48 - 26; CBS prints only approve and disapprove. ICPSR's catalog entry for this study (3697) gives field dates June 4-8; CBS's page says June 4-9. CBS's page is used."
+    },
+    {
+      "pollster": "CBS News/New York Times",
+      "sponsor": "CBS News / The New York Times",
+      "type": "approval",
+      "release_date": "2002-09-10",
+      "field_start": "2002-08-25",
+      "field_end": "2002-08-29",
+      "population": "adults",
+      "n": 1008,
+      "approve": 47,
+      "disapprove": 31,
+      "unsure": 22,
+      "question": "approve of Mayor Michael Bloomberg's handling of his job (CBS summary wording)",
+      "url": "https://www.cbsnews.com/news/new-york-city-one-year-later/",
+      "quote": "47% of New Yorkers approve of Mayor Michael Bloomberg's handling of his job, unchanged since June. 31% now disapprove, and more than one in five still offer no opinion. ... This poll was conducted among a citywide random sample of 1008 adults, interviewed by telephone August 25-29, 2002. The error due to sampling could be plus or minus three percentage points for results based on the entire sample.",
+      "fetched_via": "direct",
+      "note": "CBS's own page, 'New York City: One Year Later' (dated Sept. 11, 2002 on the 2002 page; live page shows a Sept. 16, 2002 timestamp). Also verified on Wayback: https://web.archive.org/web/20020911173209/http://www.cbsnews.com/stories/2002/09/10/opinion/polls/main521387.shtml. Unsure (22) is derived as 100 - 47 - 31, consistent with 'more than one in five'. 'Unchanged since June' is CBS's characterization of 47 vs 48."
+    }
+  ],
+  "unverified": [
+    {
+      "lead": "Marist/NY1 2002 (beyond the March 2002 reading)",
+      "status": "No other 2002 Marist NYC poll of Bloomberg found. Marist's own 'Approval Rating Over Time' tables (fetched direct from maristpoll.marist.edu) list March 2002 and then jump to April 2004. Marist's 2002 site (Wayback captures of the home page and nycpolls directory through Dec 2002) lists only the 03.12.02 Bloomberg release and a 03.08.02 WTC release for NYC. The March 2002 release names no sponsor."
+    },
+    {
+      "lead": "Quinnipiac June 2002 (~57%)",
+      "status": "No June 2002 Quinnipiac NYC release exists. The 57-23 reading is the July 18, 2002 release (field July 8-15), recorded above."
+    },
+    {
+      "lead": "Quinnipiac Aug/Sept 2002",
+      "status": "None exists. A scan of every poll.qu.edu release ID from 1 to 1000 (titles fetched for all but seven IDs that return an empty 302) found 2002 New York City releases only on Feb 6-7, Mar 27-28, Apr 1, Jul 17-18, Nov 21-25 and Dec 4. The next NYC approval release after Nov 21, 2002 is Feb 26, 2003 (releaseid=352)."
+    },
+    {
+      "lead": "Quinnipiac Dec 2002",
+      "status": "The Dec 4, 2002 release (releaseid=465) reuses the Nov 13-19 field and does not re-ask approval; no separate December field exists."
+    },
+    {
+      "lead": "NYT/CBS News June 2002 and August 2002: the Times' own article pages",
+      "status": "Not fetched; nytimes.com 2002 article pages for these polls did not surface in search. CBS's own pages were fetched instead and are recorded above. ICPSR catalog pages (studies 3697 and 3703) return HTTP 403 to this tool."
+    },
+    {
+      "lead": "NYT New York State poll, October 2002 (ICPSR 3708)",
+      "status": "Statewide, not citywide; excluded by scope."
+    }
+  ],
+  "self_audit": "Seven polls verified on pollster-owned pages: four Quinnipiac approval readings (Feb 6, Mar 27, Jul 18, Nov 21, 2002; all RV; all fetched direct from poll.qu.edu/poll-release?releaseid=N, whose IDs for 2002 run roughly 410-478 and are not chronological), one Marist excellent/good performance reading (March 2002, RV, Wayback copy of Marist's 2002 release, corroborated by Marist's own later trend PDFs), and two CBS News/New York Times adult-sample approval readings (June 4-9 and Aug 25-29, 2002) from CBS's own pages, both still live. Caveats: (1) the two CBS 'unsure' figures are derived by subtraction, not printed; (2) Quinnipiac's Nov 2002 sample size is 1,004 on the approval release but 1,322 on two sibling releases from the same field; (3) CBS and ICPSR disagree by one day on the June field end (June 9 vs June 8); (4) Quinnipiac's July 2002 table sums to 99; (5) the Marist reading is a four-point grade, not approve/disapprove, and is typed 'performance'; (6) the Marist URL is a web.archive.org copy, flagged as such. Nothing from news coverage, Wikipedia or aggregators was used for numbers. Searches: WebSearch standard and extended; fetch attempts well over ten per lead, including a full ID scan of poll.qu.edu and Wayback CDX queries for maristpoll.marist.edu and cbsnews.com."
+}

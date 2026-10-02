@@ -1,0 +1,141 @@
+{
+  "mayor": "Rudolph Giuliani",
+  "inaugurated": "1994-01-01",
+  "window": "1994-01-01 to 1994-12-31 (field dates)",
+  "polls": [
+    {
+      "pollster": "New York Times/WCBS-TV News Poll",
+      "sponsor": "The New York Times and WCBS-TV News",
+      "type": "approval",
+      "field_start": "1994-06-12",
+      "field_end": "1994-06-15",
+      "population": "adults",
+      "n": 1189,
+      "approve": 49,
+      "disapprove": 31,
+      "unsure": 20,
+      "unsure_note": "Derived as 100 minus approve minus disapprove; the article does not state the undecided share.",
+      "url": "https://web.archive.org/web/20150526104703/http://www.nytimes.com/1994/06/21/nyregion/poll-shows-support-for-giuliani-on-not-cutting-police-budget.html",
+      "original_url": "https://www.nytimes.com/1994/06/21/nyregion/poll-shows-support-for-giuliani-on-not-cutting-police-budget.html",
+      "published": "1994-06-21",
+      "quote": "The poll, which was taken June 12 to 15 amid last week's euphoria of a hometown hockey championship but well before the city begins feeling the impact of Mr. Giuliani's budget cuts, found that 49 percent of the 1,189 people questioned said they approved of Mr. Giuliani's job performance while 31 percent disapproved. The margin of sampling error for all respondents was plus or minus 3 percentage points.",
+      "secondary_quote": "The latest poll represented a cross section of all New Yorkers, not just voters.",
+      "fetched_via": "web.archive.org",
+      "notes": "ICPSR catalogues this dataset as 'CBS News/New York Times New York City Poll, June 1994' (study 6598); the Times' own article credits it to the Times and WCBS-TV News. nytimes.com itself returned HTTP 403 to direct fetches."
+    },
+    {
+      "pollster": "New York Times/WCBS-TV News Poll",
+      "sponsor": "The New York Times and WCBS-TV News",
+      "type": "approval",
+      "field_start": "1994-09-29",
+      "field_end": "1994-10-02",
+      "population": "adults",
+      "n": 495,
+      "approve": 61,
+      "disapprove": null,
+      "unsure": null,
+      "url": "https://web.archive.org/web/20150526102225/http://www.nytimes.com/1994/10/07/nyregion/the-1994-campaign-poll-giuliani-s-approval-rating-rises-to-61.html",
+      "original_url": "https://www.nytimes.com/1994/10/07/nyregion/the-1994-campaign-poll-giuliani-s-approval-rating-rises-to-61.html",
+      "published": "1994-10-07",
+      "quote": "The poll, taken between Sept. 29 and Oct. 2 with 495 city residents participating, shows that the Mayor's approval rating has shot upward in the last three months, increasing to 61 percent from 49 percent in June.",
+      "secondary_quote": "The poll had a margin of sampling error of plus or minus 4 percentage points among city residents and 3 percentage points among registered voters statewide.",
+      "fetched_via": "web.archive.org",
+      "notes": "New York City residents were a 495-person subsample of a statewide Times/WCBS-TV poll. The article never gives a disapprove or undecided figure, so those are left null rather than guessed."
+    },
+    {
+      "pollster": "Marist Institute for Public Opinion (Marist College)",
+      "sponsor": "Marist College Institute for Public Opinion",
+      "type": "performance",
+      "field_start": "1994-12-01",
+      "field_end": "1994-12-31",
+      "field_dates_note": "Marist's trend tables give only the month, 'December 1994'. Exact field dates and sample size were not in any fetched page.",
+      "population": "RV",
+      "n": null,
+      "excellent": 12,
+      "good": 39,
+      "fair": 31,
+      "poor": 13,
+      "unsure": 5,
+      "approve": 51,
+      "disapprove": 44,
+      "approve_definition": "excellent + good",
+      "disapprove_definition": "fair + poor",
+      "question": "Would you rate the job Mayor Rudolph Giuliani is doing in office as excellent, good, fair, or poor?",
+      "url": "https://web.archive.org/web/20010308020000/http://www.maristpoll.marist.edu:80/nycpolls/991013MY.html",
+      "original_url": "http://www.maristpoll.marist.edu/nycpolls/991013MY.html",
+      "quote": "Question Wording : Would you rate the job Mayor Rudolph Giuliani is doing in office as excellent, good, fair, or poor? Registered Voters [...] December 1994 12% 39% 31% 13% 5%",
+      "fetched_via": "web.archive.org",
+      "corroborating_url": "https://maristpoll.marist.edu/wp-content/uploads/2022/03/Marist-Poll_NYC-NOS-and-Tables_202203091244.pdf",
+      "corroborating_quote": "NYC005TRND. Marist Poll New York City Trend / NYC Registered Voters [...] Rudolph Giuliani December 1994 51% 44% 12% 39% 31% 13% 5%",
+      "corroborating_fetched_via": "direct",
+      "notes": "Primary source is Marist's own October 13, 1999 release (trend table from December 1994 forward), fetched from the Internet Archive because Marist's current site does not host 1990s releases. The same row appears, identically, in Marist's March 2022 NYC tables (page 4, table NYC005TRND), fetched directly from maristpoll.marist.edu. Marist's trend series begins with this December 1994 reading; there is no earlier Marist job rating of Giuliani."
+    }
+  ],
+  "other_measures": [
+    {
+      "pollster": "Quinnipiac College Poll",
+      "type": "favorability",
+      "release_date": "1994-06-22",
+      "field_start": null,
+      "field_end": null,
+      "population": "adults",
+      "n": null,
+      "favorable": 52,
+      "unfavorable": 20,
+      "mixed": 22,
+      "havent_heard": 4,
+      "refused": 2,
+      "question": "Is your opinion of Mayor Rudolph Giuliani favorable, unfavorable, mixed, or haven't you heard enough about him?",
+      "issue_approvals_same_release": {"crime": [59, 32, 9], "education": [36, 44, 20], "budget_deficit": [44, 40, 16], "race_relations": [53, 35, 13]},
+      "url": "https://web.archive.org/web/20000826212400/http://www.quinnipiac.edu:80/polls/archives.html",
+      "original_url": "http://www.quinnipiac.edu/polls/archives.html",
+      "quote": "Polls released on or before February 15, 1996, were conducted among a random sampling of New York City adults. [...] Is your opinion of Mayor Rudolph Giuliani favorable, unfavorable, mixed, or haven't you heard enough about him? [...] July 21, 1994 53 21 20 5 2 June 22, 1994 52 20 22 4 2",
+      "fetched_via": "web.archive.org",
+      "notes": "Not a job-approval question. Quinnipiac's own trend archive (as of August 2000) shows it polled New York City on June 22 and July 21, 1994, but the headline 'approve or disapprove of the way Rudolph Giuliani is handling his job as Mayor' series in that archive begins February 11, 1997 (the race-breakdown version begins June 15, 1995). No 1994 overall job-approval figure from Quinnipiac exists in any fetched page. Dates are release dates; field dates were not published in the trend table."
+    },
+    {
+      "pollster": "Quinnipiac College Poll",
+      "type": "favorability",
+      "release_date": "1994-07-21",
+      "field_start": null,
+      "field_end": null,
+      "population": "adults",
+      "n": null,
+      "favorable": 53,
+      "unfavorable": 21,
+      "mixed": 20,
+      "havent_heard": 5,
+      "refused": 2,
+      "question": "Is your opinion of Mayor Rudolph Giuliani favorable, unfavorable, mixed, or haven't you heard enough about him?",
+      "url": "https://web.archive.org/web/20000826212400/http://www.quinnipiac.edu:80/polls/archives.html",
+      "original_url": "http://www.quinnipiac.edu/polls/archives.html",
+      "quote": "July 21, 1994 53 21 20 5 2",
+      "fetched_via": "web.archive.org",
+      "notes": "See June 22, 1994 entry."
+    }
+  ],
+  "unverified": [
+    {
+      "what": "Marist December 1994 original release (field dates, sample size, sponsor)",
+      "why": "The reading itself is verified from two Marist primary pages, but the original 1994 release is not on maristpoll.marist.edu and the Internet Archive has no Marist web pages before 1999. Whether it was fielded for WNBC or the Daily News could not be confirmed from a primary page."
+    },
+    {
+      "what": "Quinnipiac overall job approval of Giuliani, 1994",
+      "why": "Quinnipiac's own archive shows NYC polls released June 22, July 21 and December 20, 1994 (favorability, issue approvals, satisfaction, most-important-problem), but no overall approve/disapprove series before 1995. Quinnipiac's current legacy database (poll.qu.edu/Poll-Release-Legacy, scanned IDs 1 to 1299) starts in 1997; the only pre-1997 NYC PDF on poll.qu.edu is April 21, 1996. If a 1994 job-approval question was asked, it is not online."
+    },
+    {
+      "what": "ICPSR 6598 codebook for the June 1994 CBS News/New York Times NYC poll",
+      "why": "icpsr.umich.edu and pcms.icpsr.umich.edu returned Cloudflare bot challenges to WebFetch, curl and the browser pane. Not needed for the headline number, which the Times article carries, but it would settle whether the Times' 'Times/WCBS-TV News' label and ICPSR's 'CBS News/New York Times' label describe the same dataset."
+    },
+    {
+      "what": "Any Daily News, Newsday or WNBC-sponsored Marist or other polls during 1994",
+      "why": "Only secondhand references exist (City & State 2022, Wikipedia), none of which were used. No primary page located."
+    },
+    {
+      "what": "NYT/WCBS first-anniversary poll, January 1995",
+      "why": "A sweep of nytimes.com daily sitemaps for Jan 1, 1994 to Jan 31, 1995 found no nyregion poll article about the mayor in January 1995, so none is asserted. The sweep only matched 'poll' or 'survey' in the URL slug and could miss an article whose headline used neither word."
+    }
+  ],
+  "method": "Sources: nytimes.com daily sitemap pages (fetchable by curl) to locate the Times' own 1994 poll articles, then Internet Archive copies of those articles (nytimes.com article pages return 403 to non-browser fetches); Internet Archive copies of maristpoll.marist.edu (1999-2001) and quinnipiac.edu/polls (2000) located through the Wayback CDX API; Marist's March 2022 NYC tables PDF fetched directly; Quinnipiac's legacy release database scanned by release ID. WebSearch surfaced none of the 1994 primary pages directly.",
+  "self_audit": "Every number above was read from the fetched page text quoted alongside it, not from memory. The two NYT entries come from Internet Archive copies (2015 captures) of the Times' own articles; direct nytimes.com fetches were refused, and that is flagged in fetched_via. The June 1994 'unsure' figure is derived, not stated, and is labelled as such. The October 1994 entry has no disapprove figure because the article gives none. The Marist December 1994 row was checked in two independent Marist documents (1999 release via Wayback, 2022 PDF direct) and matches exactly (12/39/31/13/5). Field dates for Marist and for the two Quinnipiac 1994 releases are not known; nothing was filled in. Quinnipiac 1994 favorability readings are kept out of 'polls' because they are not job approval. ICPSR was not reachable. Searches and fetch attempts numbered well over 12 (about 20 WebSearch queries, roughly 15 WebFetch calls, and several dozen curl requests)."
+}
