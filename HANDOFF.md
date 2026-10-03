@@ -30,6 +30,18 @@ Marist (March 2026) measured job approval among adults (48%) and registered vote
 - `index.html`: Vital City card system, no wordmark. Headline and dek derived from the data. Chart draws at the container's pixel width (ResizeObserver), 0 to 100 axis, hover tooltips, population filter, previous-mayor select (circles and dotted line for approve/disapprove, squares for excellent/good, a caption that names what is drawn). One table, grouped rows per poll, grey subsample rows. `?embed=1` mode posts height for the Ghost iframe pattern.
 - Bug fixed today: stat tiles showed field-end dates one day early (UTC parsing of bare ISO dates). All dates now parse at local noon.
 
+## Oct 3 2026: the "think boldly" pass (Josh asked for aggressive improvement, no specifics)
+Built and published:
+- Headline leads with the margin, not the range: Marist's 49 and Emerson's 43 look like a disagreement, but approve minus disapprove is +18 and +16; the gap is how each handles the undecided. Falls back to the range form automatically if any poll shows net disapproval. Claims only "the citywide polls that asked".
+- Dek counts the days since the last citywide approval topline (April 6).
+- Chart is two-sided: each mark drops a stem to the negative answer in the same poll, with a toggle. Marks from one poll are dodged sideways so Marist's four readings separate.
+- New section: approve-or-disapprove polls for the four predecessors within about five weeks of Mamdani's latest approval poll (months since inauguration), as stacked approve / unsure / disapprove bars with the margin. The window moves automatically when a newer approval poll is added.
+- "details" button per citywide poll: verbatim wording, strength breakdown, mode, n, margin of error, release date, links to tables, issue ratings and results by group (party, borough, age, race, etc.). All from data already verified in polls.json.
+- Search plumbing: title "Mamdani approval rating: every citywide poll, tracked", numeric meta description, schema.org Dataset JSON-LD, CSV downloads. `python3 build.py` regenerates `data/polls.csv`, `data/prior-mayors.csv` and the meta description / dateModified from the JSON. Run it after every data change, then `node --check`.
+- Suffolk's Tisch item was mislabeled approve/disapprove; issues can now carry `positive_label` / `negative_label`.
+
+Ideas not built (need Josh's call): an og:image share card; a published methodology page; emailing Honan and Siena for the missing toplines and crosstabs; a "by borough across polls" view (kept inside each poll's details because the questions differ); the weekly poll-watch routine.
+
 ## Still to do
 1. Add `ghost-embed.html` per `feedback_vital_city_embed_pattern` if Josh wants it embedded on vitalcitynyc.org.
 2. Update routine: a weekly scheduled task (sonnet tier) that searches for new citywide Mamdani polls and opens a draft row for Josh to approve; never publishes a poll unverified. Candidates to watch: Marist (NY1), Quinnipiac NYC (none since Oct 2025), Siena/NYT, Emerson/PIX11, Suffolk CityView, Manhattan Institute.

@@ -1,5 +1,5 @@
 {
-  "compiled": "2026-10-02",
+  "compiled": "2026-10-03",
   "notes": "Citywide polls of New York City adults, registered voters or likely voters, fielded Jan 1 to Oct 2, 2026, that measured Mayor Mamdani's job approval, performance rating or favorability. Only four qualifying citywide releases were found and verified: Marist (adults+RV, approval and favorability), Emerson/PIX11 (RV approval), Honan Strategy Group (LV approval, which publishes only the Jewish/non-Jewish split), Suffolk (RV excellent/good/fair/poor performance). The three measure types are not interchangeable. Approval is a binary approve/disapprove question. Performance is a four-point scale on which 'fair' is counted as negative. Favorability is about the person, not the job. 'statewide_context' holds statewide polls (Siena, Quinnipiac, Data for Progress) that report a New York City regional subsample. They are NOT citywide polls, and their NYC subsample sizes are unpublished, so keep them off the main series or label them clearly. Split entries: 'value' = approve/positive %, 'disapprove' = disapprove/negative %. Excluded: congressional-district polls of Democratic primary voters (Emerson/PIX11 May 16-17, 2026, NY-7/10/12), PPP NY-12 (Feb 26-27, 2026) and the Honan December 2025 poll (fielded before the inauguration). The New York Times article from about Oct 1-2, 2026 could not be reached (nytimes.com is blocked for this agent's tools). See gaps.md.",
   "polls": [
     {
@@ -604,16 +604,21 @@
       ],
       "issues": [
         {
-          "topic": "Mamdani asserting final say over NYPD and willingness to overrule Commissioner Tisch (strongly + somewhat)",
+          "topic": "His claim to final say over the NYPD, including overruling Commissioner Tisch",
           "approve": 47.8,
           "disapprove": 33.0,
-          "population": "RV"
+          "population": "RV",
+          "positive_label": "approve, strongly or somewhat",
+          "negative_label": "disapprove"
         },
         {
-          "topic": "Keeping Jessica Tisch as police commissioner: 'shows pragmatic leadership' vs 'is a contradiction' (not an approve/disapprove item)",
+          "topic": "Keeping Jessica Tisch as police commissioner",
           "approve": 56.2,
           "disapprove": 20.8,
-          "population": "RV"
+          "population": "RV",
+          "positive_label": "say it shows pragmatic leadership",
+          "negative_label": "say it is a contradiction",
+          "not_approval_item": true
         }
       ],
       "splits": [
