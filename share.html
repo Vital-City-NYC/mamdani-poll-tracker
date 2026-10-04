@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<title>Share card</title>
+<link rel="stylesheet" href="https://use.typekit.net/qqk2vto.css">
+<style>
+@font-face{font-family:'GascogneTS';src:url('https://vital-city-nyc.github.io/vital-city-design-system/fonts/GascogneTS-Light.ttf') format('truetype');font-weight:300}
+*{box-sizing:border-box}html,body{margin:0;width:1200px;height:630px;background:#fff;color:#050507;font-family:"halyard-text","Helvetica Neue",Arial,sans-serif;overflow:hidden}
+.c{width:1200px;height:630px;border:2px solid #050507;display:flex;flex-direction:column}
+.h{padding:50px 64px 30px;flex:1}
+h1{font-weight:900;font-size:62px;line-height:1.12;margin:0 0 22px;max-width:24ch}
+p{font-weight:300;font-size:27px;line-height:1.4;color:#707175;margin:0;max-width:44ch}
+.s{display:grid;grid-template-columns:repeat(3,1fr);background:#f7f7f4;border-top:1px solid #dddddd}
+.s>div{padding:24px 34px 28px;border-right:1px solid #dddddd}.s>div:last-child{border-right:0}
+.l{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#707175;margin-bottom:10px}
+.n{font-family:'GascogneTS',Georgia,serif;font-weight:300;font-size:62px;line-height:1;white-space:nowrap}.n span{font-family:"halyard-text",sans-serif;font-size:24px;margin-left:8px;white-space:nowrap}
+.x{font-size:19px;color:#707175;margin-top:8px}
+</style></head><body><div class="c"><div class="h"><h1 id="h"></h1><p id="d"></p></div><div class="s" id="s"></div></div>
+<script>
+const D=s=>new Date(s+'T12:00'),SH={'Marist Institute for Public Opinion (Marist Poll)':'Marist','Emerson College Polling':'Emerson','Suffolk University Political Research Center (CityView)':'Suffolk'};
+const NAME={approval:'Job approval',performance:'Performance',favorability:'Favorability'},POS={approval:'approve',performance:'excellent or good',favorability:'favorable'};
+fetch('data/polls.json').then(r=>r.json()).then(d=>{const R=[];d.polls.forEach(p=>p.measures.forEach(m=>{if(m.approve_or_positive!=null)R.push({p,m,pop:m.population||p.population,mid:(D(p.field_start).getTime()+D(p.field_end).getTime())/2});}));
+ const ap=R.filter(r=>r.m.type==='approval'),N=ap.map(r=>r.m.approve_or_positive-r.m.disapprove_or_negative),lo=Math.min(...N),hi=Math.max(...N);
+ document.getElementById('h').textContent=lo>0?`More New Yorkers approve of Mamdani than disapprove, by ${lo===hi?lo:lo+' to '+hi} points`:`Mamdani's approval rating, in every citywide poll`;
+ document.getElementById('d').textContent='Every citywide poll of the mayor since he took office, with who was surveyed, sample sizes and sources.';
+ document.getElementById('s').innerHTML=['approval','performance','favorability'].map(t=>{const r=R.filter(x=>x.m.type===t).sort((a,b)=>(b.mid-a.mid)||(a.pop==='RV'?-1:1))[0];if(!r)return '';return `<div><div class="l">${NAME[t]}, latest poll</div><div class="n">${r.m.approve_or_positive}%<span>${POS[t]}</span></div><div class="x">${SH[r.p.pollster]||r.p.pollster}, ${D(r.p.field_end).toLocaleString('en',{month:'long',year:'numeric'})}</div></div>`;}).join('');document.title='ready';});
+</script></body></html>

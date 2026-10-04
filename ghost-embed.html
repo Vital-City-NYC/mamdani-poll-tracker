@@ -1,0 +1,30 @@
+<!-- Mamdani poll tracker — Vital City embed
+     Paste this whole block into a Ghost HTML card.
+     Live page: https://vitalcity-nyc.github.io/mamdani-poll-tracker/ -->
+<div class="vc-embed-mamdani-poll-tracker" style="margin:1.5em 0;">
+  <div class="vc-embed-mamdani-poll-tracker__frame" style="position:relative;width:100%;border:1px solid #111;overflow:hidden;">
+    <iframe
+      class="vc-embed-mamdani-poll-tracker__iframe"
+      src="https://vitalcity-nyc.github.io/mamdani-poll-tracker/?embed=1"
+      title="Mamdani approval rating: every citywide poll, tracked"
+      loading="lazy"
+      allow="fullscreen"
+      scrolling="no"
+      style="display:block;width:100%;height:3200px;border:0;background:transparent;"
+    ></iframe>
+  </div>
+  <p style="font-size:0.8em;color:#666;margin:0.5em 0 0;text-align:center;">
+    <a href="https://vitalcity-nyc.github.io/mamdani-poll-tracker/" target="_blank" rel="noopener">Open full screen &#8599;</a>
+  </p>
+
+  <script>
+    (function () {
+      window.addEventListener('message', function (e) {
+        var d = e && e.data;
+        if (!d || d.type !== 'vc-embed-height' || d.id !== 'mamdani-poll-tracker') return;
+        var f = document.querySelector('.vc-embed-mamdani-poll-tracker__iframe');
+        if (f && typeof d.height === 'number') f.style.height = d.height + 'px';
+      });
+    })();
+  </script>
+</div>

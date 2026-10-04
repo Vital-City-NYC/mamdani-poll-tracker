@@ -40,10 +40,14 @@ Built and published:
 - Search plumbing: title "Mamdani approval rating: every citywide poll, tracked", numeric meta description, schema.org Dataset JSON-LD, CSV downloads. `python3 build.py` regenerates `data/polls.csv`, `data/prior-mayors.csv` and the meta description / dateModified from the JSON. Run it after every data change, then `node --check`.
 - Suffolk's Tisch item was mislabeled approve/disapprove; issues can now carry `positive_label` / `negative_label`.
 
-Ideas not built (need Josh's call): an og:image share card; a published methodology page; emailing Honan and Siena for the missing toplines and crosstabs; a "by borough across polls" view (kept inside each poll's details because the questions differ); the weekly poll-watch routine.
+Later the same day (Josh said "continue"): added `METHODOLOGY.md` (linked from the page footer to its GitHub-rendered copy), `ghost-embed.html` (the standard iframe + postMessage snippet, slug `mamdani-poll-tracker`), `share.html` + `share.sh` + `share.png` (1200x630 preview image shot with headless Chrome; wired as og:image), and static headline/dek stamping in `build.py` so crawlers see the finding without running the script.
+
+Update checklist after a new poll: edit `data/polls.json` (primary URL + quote, set `compiled`), `python3 build.py`, `node --check` the script, preview, `./share.sh` if the headline or boxes changed, commit, publish.
+
+Not built (need Josh's call): emailing Honan and Siena for the missing toplines and crosstabs; a "by borough across polls" view (kept inside each poll's details because the questions differ); the weekly poll-watch routine (a standing scheduled task; prompt drafted in `research/poll-watch-routine.md`, not created).
 
 ## Still to do
-1. Add `ghost-embed.html` per `feedback_vital_city_embed_pattern` if Josh wants it embedded on vitalcitynyc.org.
+1. (Done Oct 3: `ghost-embed.html` exists.)
 2. Update routine: a weekly scheduled task (sonnet tier) that searches for new citywide Mamdani polls and opens a draft row for Josh to approve; never publishes a poll unverified. Candidates to watch: Marist (NY1), Quinnipiac NYC (none since Oct 2025), Siena/NYT, Emerson/PIX11, Suffolk CityView, Manhattan Institute.
 3. The Oct 1-2 New York Times piece on Mamdani's approval is still unchecked by a human (nytimes.com not fetchable). Josh should confirm it cites no poll missing here.
 4. Optional: ask Honan Strategy Group for the full June topline; ask Siena for the March and April 2026 crosstabs so those two subsample rows can go HIGH.

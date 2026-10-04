@@ -76,9 +76,31 @@ if newest:
     desc += f" Latest citywide poll: {short}, {fd(p['field_start'], p['field_end'])}, {m['approve_or_positive']} percent {POSW[m['type']]}."
 desc += " Field dates, who was surveyed, sample sizes and sources for each."
 html = (HERE / "index.html").read_text()
+# Static headline and dek for crawlers and no-JavaScript readers; the page's script
+# overwrites both with the same finding plus the live day count.
+WORD = ["zero", "one", "two", "three", "four", "five", "six"]
+if ap:
+    nets = [m["approve_or_positive"] - m["disapprove_or_negative"] for m in ap]
+    ap_polls = [p for p in polls["polls"] if any(m["type"] == "approval" and m.get("approve_or_positive") is not None for m in p["measures"])]
+    k = len(ap_polls)
+    which = "the one citywide poll" if k == 1 else "both citywide polls" if k == 2 else f"all {WORD[k] if k < len(WORD) else k} citywide polls"
+    rng = str(min(nets)) if min(nets) == max(nets) else f"{min(nets)} to {max(nets)}"
+    h1 = (f"More New Yorkers approve of Mamdani than disapprove, by {rng} points, in {which} that asked" if min(nets) > 0
+          else f"Mamdani's job approval has run between {min(a)} and {max(a)} percent in citywide polls this year, with disapproval between {min(d)} and {max(d)}")
+    last = max(ap_polls, key=lambda p: p["field_end"])
+    le = dt.date.fromisoformat(last["field_end"])
+    lede = (f"Approval has run from {min(a)} to {max(a)} percent and disapproval from {min(d)} to {max(d)} across the citywide polls that published a topline. "
+            f"The most recent ended {le.strftime('%B')} {le.day}, {le.year}. Performance grades and favorability are different questions and are kept apart below.")
+    html0 = (HERE / "index.html").read_text()
+    html0, a1 = re.subn(r'(<h1 id="finding">)[^<]*(</h1>)', lambda mm: mm.group(1) + h1 + mm.group(2), html0, count=1)
+    html0, a2 = re.subn(r'(<p class="dek" id="lede">)[^<]*(</p>)', lambda mm: mm.group(1) + lede + mm.group(2), html0, count=1)
+    assert a1 == 1 and a2 == 1, "headline markers not found in index.html"
+    (HERE / "index.html").write_text(html0)
+    html = html0
 html, n1 = re.subn(r'(<meta name="description" content=")[^"]*(")', lambda mm: mm.group(1) + desc + mm.group(2), html, count=1)
 html, n2 = re.subn(r'("dateModified":")[^"]*(")', lambda mm: mm.group(1) + polls["compiled"] + mm.group(2), html, count=1)
 assert n1 == 1 and n2 == 1, "metadata markers not found in index.html"
 (HERE / "index.html").write_text(html)
 print(f"polls.csv: {len(rows)} rows; prior-mayors.csv: {len(prow)} rows")
 print("meta description:", desc)
+print("If the headline or the three boxes changed, re-shoot the share image: ./share.sh")
