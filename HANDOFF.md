@@ -2,6 +2,11 @@
 
 Started 2026-10-02. This file is the pickup point for whichever session continues the work.
 
+## Canonical copy (changed 2026-10-05)
+The GitHub repo vitalcity-nyc/mamdani-poll-tracker (main) is now the canonical copy, because the weekly routine `mamdani-poll-tracker-weekly` (local scheduled task, Mondays about 8:15 a.m., Opus tier) clones it fresh, adds verified polls, rebuilds and pushes there. Before editing anywhere else, clone or pull that repo; the folder in ~/Experiments (branch claude/admiring-jennings-cf96be) may be behind it. The routine's full instructions: ~/.claude/scheduled-tasks/mamdani-poll-tracker-weekly/SKILL.md. It Slack-DMs Josh only when it adds a poll, finds one it cannot verify, or fails.
+
+Manual sweep on 2026-10-05 found nothing new: Quinnipiac's releases since Sep 20 are national; Siena's, Marist's and Emerson's recent releases cover other states.
+
 ## Where the live copy is (read this first)
 On 2026-10-02 Josh split this project out of the chat that launched it (that chat also launched the "Who pays for NYC" explainer and keeps that one). The tracker now lives in the session that opens the worktree branch `claude/admiring-jennings-cf96be` (the Code-tab session named "admiring-jennings"). Its copy of this folder is canonical.
 
@@ -44,14 +49,14 @@ Later the same day (Josh said "continue"): added `METHODOLOGY.md` (linked from t
 
 Update checklist after a new poll: edit `data/polls.json` (primary URL + quote, set `compiled`), `python3 build.py`, `node --check` the script, preview, `./share.sh` if the headline or boxes changed, commit, publish.
 
-Not built (need Josh's call): emailing Honan and Siena for the missing toplines and crosstabs; a "by borough across polls" view (kept inside each poll's details because the questions differ); the weekly poll-watch routine (a standing scheduled task; prompt drafted in `research/poll-watch-routine.md`, not created).
+Not built (need Josh's call): emailing Honan and Siena for the missing toplines and crosstabs; a "by borough across polls" view (kept inside each poll's details because the questions differ); the weekly routine (created Oct 5, see top).
 
 ## Oct 5 2026: predecessor table re-anchored
 Josh: spotlighting "three months in" felt wrong when the term is nine months old. The table now anchors on today's months-since-inauguration and shows each mayor's two most recent approve-or-disapprove polls as of that point (Mamdani's own two latest, however old, with the sub-line saying they date from month three). Do not anchor comparisons on the date of Mamdani's last poll again.
 
 ## Still to do
 1. (Done Oct 3: `ghost-embed.html` exists.)
-2. Update routine: a weekly scheduled task (sonnet tier) that searches for new citywide Mamdani polls and opens a draft row for Josh to approve; never publishes a poll unverified. Candidates to watch: Marist (NY1), Quinnipiac NYC (none since Oct 2025), Siena/NYT, Emerson/PIX11, Suffolk CityView, Manhattan Institute.
+2. (Done Oct 5: weekly routine created; Josh asked it to add polls itself, so it publishes verified polls directly and runs on Opus.) Candidates to watch: Marist (NY1), Quinnipiac NYC (none since Oct 2025), Siena/NYT, Emerson/PIX11, Suffolk CityView, Manhattan Institute.
 3. The Oct 1-2 New York Times piece on Mamdani's approval is still unchecked by a human (nytimes.com not fetchable). Josh should confirm it cites no poll missing here.
 4. Optional: ask Honan Strategy Group for the full June topline; ask Siena for the March and April 2026 crosstabs so those two subsample rows can go HIGH.
 
