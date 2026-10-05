@@ -55,7 +55,7 @@ Each reading is labeled all adults, registered voters or likely voters, as the p
 - **Days since the last approval poll.** Today's date minus the last field date of the most recent citywide poll that published a job-approval figure.
 - **Latest poll per question.** For each of the three question types, the citywide poll with the latest field midpoint.
 - **Months since inauguration.** For previous mayors, the midpoint of the field dates minus January 1 of the inauguration year, in days divided by 30.4375. A previous mayor's poll is drawn at the same number of months after January 1, 2026.
-- **The predecessor comparison.** Approve-or-disapprove polls of the four previous mayors whose months-since-inauguration value falls within 1.25 months either side of Mamdani's most recent citywide job-approval poll. Excellent-or-good grades are left out of that table. When a mayor has no poll in the window, the nearest later reading is stated in words.
+- **The predecessor comparison.** The table is anchored on today. It takes the number of months since January 1, 2026, and shows each previous mayor's two most recent approve-or-disapprove polls fielded by that same number of months into his own first term (with a tolerance of a quarter of a month). Mamdani's rows are his two most recent citywide polls that published a job-approval figure, however old they are; the months-in column shows the age of every reading. Excellent-or-good grades are left out of that table. When a mayor has no poll by that point, his first reading is stated in words.
 - **Rounding.** Figures are shown as the pollster published them. Suffolk's unrounded results give 56.6 percent excellent or good; Suffolk's release rounds this to 57 and the page follows the release.
 
 ## Known limitations

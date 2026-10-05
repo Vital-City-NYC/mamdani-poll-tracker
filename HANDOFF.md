@@ -46,6 +46,9 @@ Update checklist after a new poll: edit `data/polls.json` (primary URL + quote, 
 
 Not built (need Josh's call): emailing Honan and Siena for the missing toplines and crosstabs; a "by borough across polls" view (kept inside each poll's details because the questions differ); the weekly poll-watch routine (a standing scheduled task; prompt drafted in `research/poll-watch-routine.md`, not created).
 
+## Oct 5 2026: predecessor table re-anchored
+Josh: spotlighting "three months in" felt wrong when the term is nine months old. The table now anchors on today's months-since-inauguration and shows each mayor's two most recent approve-or-disapprove polls as of that point (Mamdani's own two latest, however old, with the sub-line saying they date from month three). Do not anchor comparisons on the date of Mamdani's last poll again.
+
 ## Still to do
 1. (Done Oct 3: `ghost-embed.html` exists.)
 2. Update routine: a weekly scheduled task (sonnet tier) that searches for new citywide Mamdani polls and opens a draft row for Josh to approve; never publishes a poll unverified. Candidates to watch: Marist (NY1), Quinnipiac NYC (none since Oct 2025), Siena/NYT, Emerson/PIX11, Suffolk CityView, Manhattan Institute.
